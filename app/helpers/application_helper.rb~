@@ -158,7 +158,7 @@ module CASControllerIncludes
       new_user.login = session[:cas_user].to_s
       person = new_user.ldap_person
       #new_user.email = person.email
-      #new_user.name = new_user.ldap_person_full_name
+      new_user.name = new_user.ldap_person_full_name
       new_user.update_user_type
       
       if new_user.save && new_user.errors.empty? then 

@@ -183,9 +183,9 @@ class User < ActiveRecord::Base
   end
 
   # @return [String] Full name, as provided by LDAP
-#  def ldap_person_full_name
-#    "#{self.ldap_person.firstname} #{self.ldap_person.lastname}".titleize
-#  end
+  def ldap_person_full_name
+    "#{self.ldap_person.firstname} #{self.ldap_person.lastname}".titleize
+  end
 
 
   # Updates this User's role, based on the

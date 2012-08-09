@@ -24,10 +24,10 @@ ResearchMatch::Application.configure do
   config.log_level = :info
 
   # CAS authentication
-#  CASClient::Frameworks::Rails::Filter.configure(
-#    :cas_base_url => "https://wind.columbia.edu/"
-#    #:cas_base_url => "https://auth-test.berkeley.edu/cas/"
-#  )
+  CASClient::Frameworks::Rails::Filter.configure(
+    :cas_base_url => "https://wind.columbia.edu/"
+    #:cas_base_url => "https://auth-test.berkeley.edu/cas/"
+  )
 
   # ActionMailer
   ActionMailer::Base.raise_delivery_errors = true
