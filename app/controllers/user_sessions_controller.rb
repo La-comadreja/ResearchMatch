@@ -5,6 +5,7 @@ class UserSessionsController < ApplicationController
 
   def new
     if login_user!(User.find_by_login(session[:cas_user]))
+       puts "A"
       redirect_to request.referer || home_path
     elsif !first_login
       # user's first login; redirect already done for us

@@ -1,0 +1,113 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, :as => resource_name, :html => { :class => 'form-horizontal'}, :url => registration_path(resource_name)) do |f| %>
+  
+<br /> <br />
+<fieldset>
+<font color="red">*</font>
+		<div class="control-group <% if resource.errors[:name].present? %>error<% end %>">
+		<%= f.label 'Full Name', :class => 'control-label' %>
+		  <div class="controls">
+		    <%= f.text_field :name %>
+				<% if resource.errors[:name].present? %>
+					<span class="help-inline">Name <%= strip(resource.errors[:name]) %></span>
+				<% end %>
+		  </div>
+		</div>
+
+		<div class="control-group <% if resource.errors[:email].present? %>error<% end %>">
+		<%= f.label :email, :class => 'control-label' %>
+		  <div class="controls">
+		    <%= f.email_field :email %>
+				<% if resource.errors[:email].present? %>
+					<span class="help-inline">Email <%= strip(resource.errors[:email]) %></span>
+				<% end %>
+		  </div>
+		</div>
+
+		<div class="control-group <% if resource.errors[:password].present? %>error<% end %>">
+		<%= f.label :password, :class => 'control-label' %>
+		  <div class="controls">
+		    <%= f.password_field :password %>
+				<% if resource.errors[:password].present? %>
+					<span class="help-inline">Password <%= strip(resource.errors[:password]) %></span>
+				<% end %>
+		  </div>
+		</div>
+
+		<div class="control-group <% if resource.errors[:password_confirmation].present? %>error<% end %>">
+		<%= f.label :password_confirmation, :class => 'control-label' %>
+		  <div class="controls">
+		    <%= f.password_field :password_confirmation %>
+				<% if resource.errors[:password_confirmation].present? %>
+					<span class="help-inline"><%= strip(resource.errors[:password_confirmation]) %></span>
+				<% end %>
+		  </div>
+		</div>
+
+		<div class="control-group <% if resource.errors[:currentSchool].present? %>error<% end %>">
+		<%= f.label 'School Affiliation', :class => 'control-label' %>
+		  <div class="controls">
+		    <%= f.text_field :currentSchool %>
+				<% if resource.errors[:currentSchool].present? %>
+					<span class="help-inline">School affiliation <%= strip(resource.errors[:currentSchool]) %></span>
+				<% end %>
+		  </div>
+		</div>
+
+		<div class="control-group <% if resource.errors[:position].present? %>error<% end %>">
+		<%= f.label 'Position', :class => 'control-label' %>
+		  <div class="controls">
+		    <%= select_tag 'user[position]', options_for_select([ 'Undergraduate', 'Graduate', 'Faculty', 'Staff', 'Other']) %>
+				<% if resource.errors[:position].present? %>
+					<span class="help-inline">Position <%= strip(resource.errors[:position]) %></span>
+				<% end %>
+		  </div>
+		</div>
+
+		<div class="control-group <% if resource.errors[:summary].present? %>error<% end %>">
+		<%= f.label :summary, :class => 'control-label' %>
+		  <div class="controls">
+		    <%= f.text_area :summary %>
+				<% if resource.errors[:summary].present? %>
+					<span class="help-inline">Summary <%= strip(resource.errors[:summary]) %></span>
+				<% end %>
+		  </div>
+		</div>
+
+		<div class="control-group <% if resource.errors[:courses].present? %>error<% end %>">
+		<%= f.label 'Courses', :class => 'control-label' %>
+		  <div class="controls">
+		    <%= f.text_area :courses %>
+				<% if resource.errors[:courses].present? %>
+					<span class="help-inline">Courses <%= strip(resource.errors[:courses]) %></span>
+				<% end %>
+		  </div>
+		</div>
+
+		<div class="control-group <% if resource.errors[:gpa].present? %>error<% end %>">
+		<%= f.label :gpa, :class => 'control-label' %>
+		  <div class="controls">
+		    <%= select_tag 'user[gpa]', options_for_select(['A+', 'A', 'B+', 'B', 'C+', 'C', 'D+', 'D']) %>
+				<% if resource.errors[:gpa].present? %>
+					<span class="help-inline">GPA <%= strip(resource.errors[:gpa]) %></span>
+				<% end %>
+		  </div>
+		</div>
+
+		<div class="control-group <% if resource.errors[:otherInfo].present? %>error<% end %>">
+		<%= f.label 'Other Info (Relevant Experiences, Awards, etc)', :class => 'control-label' %>
+		  <div class="controls">
+		    <%= f.text_area :otherInfo %>
+				<% if resource.errors[:otherInfo].present? %>
+					<span class="help-inline">Other Info <%= strip(resource.errors[:otherInfo]) %></span>
+				<% end %>
+		  </div>
+		</div>
+
+<div class="form-actions">
+  <%= f.submit "Sign up", :class => 'btn primary large' %></div>
+</fieldset>
+<% end %>
+
+<%= render "links" %>

@@ -1,0 +1,39 @@
+<h1 class="center">Sign In!</h1><br>
+
+
+
+<%= form_for(resource, :as => resource_name, :html => { :class => 'well signin' }, :url => session_path(resource_name)) do |f| %>
+
+
+
+<div class="span4 well border-color">
+
+<div class="control-group"><%= f.label :email, :class => 'control-label' %>
+  <div class="controls">
+    <%= f.text_field :email  %>
+  </div>
+</div>
+
+<div class="control-group"><%= f.label :password, :class => 'control-label' %>
+  <div class="controls">
+    <%= f.password_field :password %>
+  </div>
+</div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div><%= f.label :remember_me, :class => 'checkbox span2' %> <%= f.check_box :remember_me %> </div>
+  <% end -%>
+<br>
+  <div> <%= f.submit "Sign in", :class => 'btn btn-primary btn-large' %>
+		<%= render "links" %>
+	</div>
+</div>
+
+<div class="span6 well border-color">
+	<h3>Attention Current Users</h3>
+	<br>
+	<p>Can't sign in? We are now requiring that all users confirm their accounts with a valid Columbia email address. If you have not done this, please click 
+		<%= link_to "here", new_confirmation_path(resource_name) %>. You should receive an email with a link to verify your account.</p>
+</div>
+<% end %>
+

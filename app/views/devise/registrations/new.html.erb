@@ -1,0 +1,133 @@
+
+
+<h1 class="center">Registration</h1>
+<%= form_for(resource, :as => resource_name, :html => { :class => 'form-horizontal'}, :url => registration_path(resource_name)) do |f| %>
+
+<br /> <br />
+<fieldset>
+<div class="alert alert-info indented">
+	At this time, ResearchMat.ch is exclusive to members of the Columbia community with a valid Columbia email address. 
+		Please check your email to confirm your account after registration.
+</div>
+<% if @user.errors.any? %>
+	<div class="alert alert-error">
+		<ul>
+			<h4>Please correct the following errors:</h4>
+		<li><%= raw flash[:error] = @user.errors.full_messages.join('.</li><li>').gsub('Currentschool', 'School Affiliation') %>.</li>
+		</ul>
+	</div>
+<% end %>
+
+		<div class="control-group span5 <% if resource.errors[:name].present? %>error<% end %>">
+		<%= f.label '* Full Name',  :class => 'control-label' %>
+		  <div class="controls">
+		    <%= f.text_field :name %>	
+		  </div>
+		</div>
+
+	
+			<div class="control-group span5 <% if resource.errors[:email].present? %>error<% end %>">
+			<%= f.label '* Email', :class => 'control-label' %>
+			  <div class="controls">
+			    <%= f.email_field :email %>
+			  </div>
+			</div>
+
+				<div class="control-group span5 <% if resource.errors[:password].present? %>error<% end %>">
+				<%= f.label '* Password', :class => 'control-label' %>
+				  <div class="controls">
+				    <%= f.password_field :password %>
+				  </div>
+				</div>
+
+		<div class="control-group span5 <% if resource.errors[:password_confirmation].present? %>error<% end %>">
+		<%= f.label '* Password Confirm', :class => 'control-label' %>
+		  <div class="controls">
+		    <%= f.password_field :password_confirmation %>
+			
+		  </div>
+		</div>
+
+		<div class="control-group span5 <% if resource.errors[:currentSchool].present? %>error<% end %>">
+		<%= f.label '* School Affiliation', :class => 'control-label' %>
+		  <div class="controls">
+		    <%= f.text_field :currentSchool, :placeholder => 'eg. SEAS, CC, GS, etc.' %>
+		  </div>
+		</div>
+		
+		<div class="control-group span5 <% if resource.errors[:department].present? %>error<% end %>">
+		<%= f.label '* Department', :class => 'control-label' %>
+		  <div class="controls">
+		    <%= f.text_field :department %>
+		  </div>
+		</div>
+
+		<div class="control-group span5 <% if resource.errors[:position_id].present? %>error<% end %>">
+		<%= f.label 'Position', :class => 'control-label' %>
+		  <div class="controls">
+		    <%= select_tag 'user[position_id]', options_for_select([ ['Undergraduate', 0], ['Graduate', 1], ['Faculty', 2], ['Staff', 3], ['Other', 4]]), :id=>"take-val" %>
+		  </div>
+		</div>
+
+<%
+=begin
+%>>
+		<div class="control-group span5 hide2 <% if resource.errors[:gpa].present? %>error<% end %>">
+		<%= f.label 'GPA', :class => 'control-label' %>
+		  <div class="controls">
+		    <%= select_tag 'user[gpa]', options_for_select(['Undisclosed','A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'D-', 'F']) %>
+		  </div>
+		</div>
+		
+		<h3 class="span12 grey hide2">Optional<br></h3>
+		<div class="control-group span12 hide2 alert alert-info<% if resource.errors[:summary].present? %>error<% end %>">
+		<%= f.label 'Interests', :class => 'control-label' %>
+		  <div class="controls">
+		    <%= f.text_area :summary, :class=>"span8", :rows=>"3"   %>
+				
+		  </div>
+		</div>
+		
+		<div class="control-group span12 hide<% if resource.errors[:courses].present? %>error<% end %>">
+		<%= f.label 'Courses', :class => 'control-label' %>
+		  <div class="controls">
+		    <%= f.text_area :courses, :class=>"span8", :rows=>"3" %>
+			
+		  </div>
+		</div>
+
+		<div class="control-group span12 hide2 alert alert-info<% if resource.errors[:otherInfo].present? %>error<% end %>">
+		<%= f.label 'Other Info (Relevant Experiences, Awards, Skills, etc)', :class => 'control-label' %>
+		  <div class="controls">
+		    <%= f.text_area :otherInfo, :class=>"span8", :rows=>"6" %>
+		  </div>
+		</div>
+<%
+=end
+%>
+
+
+
+<div class="form-actions span10">
+	<p class="center"></p>
+	<div class="span4 offset3">
+  <%= f.submit "Sign up", :class => 'btn btn-primary btn-large' %> <br>
+	</div>
+</div>
+</fieldset>
+<% end %>
+
+<script>
+$('#take-val').change(function() {
+   var val = $(this).val();
+   if (val == '2') {
+      $('.hide2').slideUp();
+   }
+   else {
+      $('.hide2').slideDown(); 
+   }
+});
+</script>
+
+
+<%= render "links" %>
