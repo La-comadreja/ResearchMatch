@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111115072414) do
+ActiveRecord::Schema.define(:version => 20120812151425) do
 
   create_table "applics", :force => true do |t|
     t.integer  "job_id"
@@ -168,19 +168,19 @@ ActiveRecord::Schema.define(:version => 20111115072414) do
 
   create_table "users", :force => true do |t|
     t.string   "name"
-    t.string   "login",                              :null => false
-    t.string   "email",                              :null => false
-    t.string   "persistence_token",                  :null => false
-    t.string   "single_access_token",                :null => false
-    t.string   "perishable_token",                   :null => false
-    t.integer  "login_count",         :default => 0, :null => false
-    t.integer  "failed_login_count",  :default => 0, :null => false
+    t.string   "login",                                 :null => false
+    t.string   "email",                                 :null => false
+    t.string   "persistence_token",                     :null => false
+    t.string   "single_access_token",                   :null => false
+    t.string   "perishable_token",                      :null => false
+    t.integer  "login_count",            :default => 0, :null => false
+    t.integer  "failed_login_count",     :default => 0, :null => false
     t.datetime "last_request_at"
     t.datetime "current_login_at"
     t.datetime "last_login_at"
     t.string   "current_login_ip"
     t.string   "last_login_ip"
-    t.integer  "user_type",           :default => 0, :null => false
+    t.integer  "user_type",              :default => 0, :null => false
     t.integer  "units"
     t.integer  "free_hours"
     t.text     "research_blurb"
@@ -188,9 +188,19 @@ ActiveRecord::Schema.define(:version => 20111115072414) do
     t.boolean  "summer"
     t.string   "url"
     t.integer  "year"
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
   end
 
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["login"], :name => "index_users_on_login", :unique => true
+  add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
   create_table "watches", :force => true do |t|
     t.integer  "job_id"

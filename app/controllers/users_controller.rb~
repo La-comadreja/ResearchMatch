@@ -9,9 +9,9 @@ class UsersController < ApplicationController
   auto_complete_for :proglang, :name
     
   #CalNet / CAS Authentication
-  # before_filter CASClient::Frameworks::Rails::Filter
-  # before_filter :rm_login_required, :except => [:new, :create]
-  # before_filter :setup_cas_user, :except => [:new, :create]
+  before_filter CASClient::Frameworks::Rails::Filter
+  before_filter :rm_login_required, :except => [:new, :create]
+  #before_filter :setup_cas_user, :except => [:new, :create]
    
   # Ensures that only this user -- and no other users -- can edit his/her profile
   before_filter :correct_user_access, :only => [ :edit, :update, :destroy ]

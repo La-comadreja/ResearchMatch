@@ -158,7 +158,7 @@ module CASControllerIncludes
       new_user.login = session[:cas_user].to_s
       person = new_user.ldap_person
       #new_user.email = person.email
-      new_user.name = new_user.ldap_person_full_name
+      #new_user.name = new_user.ldap_person_full_name
       new_user.update_user_type
       
       if new_user.save && new_user.errors.empty? then 
@@ -171,7 +171,7 @@ module CASControllerIncludes
         redirect_to edit_user_path(@current_user.id)
         return false
       else
-        flash[:error]  = "We couldn't set up that account, sorry.  Please try again, or contact support."
+        flash[:error]  = "We couldn't set up that account, sorry.  Please try again, or contact support." + new_user.save.to_s + " "
         flash[:error] += new_user.errors.inspect if Rails.env == 'development'
         redirect_to home_path
         return false

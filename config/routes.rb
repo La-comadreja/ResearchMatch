@@ -1,6 +1,8 @@
 ResearchMatch::Application.routes.draw do
 
 
+  devise_for :users
+
   get "contact_us/contact", :as => :contact_us
   post "contact_us/send_email", :as => :feedback_email_link
 
@@ -39,6 +41,7 @@ ResearchMatch::Application.routes.draw do
   # Access control
   match '/logout' => 'user_sessions#destroy'
   match '/login'  => 'user_sessions#new'
+  match '/repeat_login' => 'users#repeat_login'
 
   # Users
   resources :users

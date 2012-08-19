@@ -79,7 +79,7 @@ module AttribsHelper
     # the user's edit profile form displays existing attribs.
     AttribTypes.each do |attrib_type|
       params[attrib_type] = {}
-      params[attrib_type][:name] = obj.attrib_names_for_type(attrib_type, true) if obj != nil
+      params[attrib_type][:name] = obj.attrib_names_for_type(attrib_type, true)
     end
   end
 
