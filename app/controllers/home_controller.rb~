@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
 	def index
-	    @departments = Department.all
+		# @departments = Department.all
 	end
 	
 end

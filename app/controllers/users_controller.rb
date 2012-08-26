@@ -49,7 +49,7 @@ class UsersController < ApplicationController
   end
  
   def create
-    logout_keeping_session!
+    # logout_keeping_session!
 
     # See if this user was already created
     # TODO: handle this better

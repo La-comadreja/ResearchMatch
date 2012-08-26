@@ -1,8 +1,8 @@
 <% content_for :title, "User Profile" %>
 
 <h1>User Profile</h1>
-if @user != nil then
-<%= form_for @user do |f| %>
+
+<%= if @user != nil form_for @user do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -15,7 +15,7 @@ if @user != nil then
     </div>
     <br />
   <% end %>
-  end
+<% end %>
 
 <!-- Basic info: i.e., email address -->
 <%# TODO: don't rip off dashboard CSS! %>

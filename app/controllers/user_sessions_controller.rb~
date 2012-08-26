@@ -4,6 +4,9 @@ class UserSessionsController < ApplicationController
   #before_filter CASClient::Frameworks::Rails::Filter, :except => :destroy
 
   def new
+   redirect_to new_path
+#  redirect_to profile_path
+
 #    if login_user!(User.find_by_login(session[:cas_user]))
 #       puts "A"
 #      redirect_to request.referer || home_path
