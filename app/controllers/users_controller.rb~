@@ -49,7 +49,7 @@ class UsersController < ApplicationController
   end
  
   def create
-    logout_keeping_session!
+    # logout_keeping_session!
 
     # See if this user was already created
     # TODO: handle this better
@@ -60,7 +60,7 @@ class UsersController < ApplicationController
 
     @user = User.new(params[:user])
     @user.login = session[:cas_user]
-    @user.name = @user.ldap_person_full_name
+    # @user.name = @user.ldap_person_full_name
 
     # For some reason, the email doesn't persist when coming from 
     # the new action. This band-aid works.

@@ -41,6 +41,8 @@ GEM
     activesupport (3.0.10)
     acts_as_taggable_on_steroids (1.2)
     addressable (2.2.6)
+    annotate (2.5.0)
+      rake
     arel (2.0.10)
     autotest-rails (4.1.0)
       ZenTest
@@ -179,6 +181,7 @@ PLATFORMS
 DEPENDENCIES
   actionmailer-with-request (~> 0.3)
   acts_as_taggable_on_steroids
+  annotate (= 2.5.0)
   authlogic!
   autotest-rails
   capistrano

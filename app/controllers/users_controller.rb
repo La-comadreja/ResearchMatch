@@ -60,11 +60,11 @@ class UsersController < ApplicationController
 
     @user = User.new(params[:user])
     @user.login = session[:cas_user]
-    @user.name = @user.ldap_person_full_name
+    # @user.name = @user.ldap_person_full_name
 
     # For some reason, the email doesn't persist when coming from 
     # the new action. This band-aid works.
-    @user.email ||= @user.ldap_person.email
+    # @user.email ||= @user.ldap_person.email
 
     @user.update_user_type
     if @user.save && @user.errors.empty? then 

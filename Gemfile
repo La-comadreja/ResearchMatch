@@ -39,6 +39,8 @@ group :development do
   gem 'mysql2', '< 0.3.0'  # rails 3.0.x and mysql >= .3 don't mix
 end
 
+gem 'annotate', '2.5.0', group: :development
+
 # Testing
 group :test do
   gem 'autotest-rails'

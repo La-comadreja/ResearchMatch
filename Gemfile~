@@ -21,6 +21,7 @@ gem 'net-ldap', :require => 'net/ldap'
 gem 'nokogiri'
 gem 'actionmailer-with-request', '~> 0.3'
 gem 'jquery-rails', '>= 1.0.12'
+gem "devise", ">= 1.5.0"
 
 # Deploy with Capistrano
 gem 'capistrano'
