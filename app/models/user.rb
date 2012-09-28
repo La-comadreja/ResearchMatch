@@ -3,28 +3,36 @@ require 'digest/sha1'
 class User < ActiveRecord::Base
 
   # === List of columns ===
-  #   id                  : integer 
-  #   name                : string 
-  #   login               : string 
-  #   email               : string 
-  #   persistence_token   : string 
-  #   single_access_token : string 
-  #   perishable_token    : string 
-  #   login_count         : integer 
-  #   failed_login_count  : integer 
-  #   last_request_at     : datetime 
-  #   current_login_at    : datetime 
-  #   last_login_at       : datetime 
-  #   current_login_ip    : string 
-  #   last_login_ip       : string 
-  #   user_type           : integer 
-  #   units               : integer 
-  #   free_hours          : integer 
-  #   research_blurb      : text 
-  #   experience          : string 
-  #   summer              : boolean 
-  #   url                 : string 
-  #   year                : integer 
+  #   id                     : integer 
+  #   name                   : string 
+  #   login                  : string 
+  #   email                  : string 
+  #   persistence_token      : string 
+  #   single_access_token    : string 
+  #   perishable_token       : string 
+  #   login_count            : integer 
+  #   failed_login_count     : integer 
+  #   last_request_at        : datetime 
+  #   current_login_at       : datetime 
+  #   last_login_at          : datetime 
+  #   current_login_ip       : string 
+  #   last_login_ip          : string 
+  #   user_type              : integer 
+  #   units                  : integer 
+  #   free_hours             : integer 
+  #   research_blurb         : text 
+  #   experience             : string 
+  #   summer                 : boolean 
+  #   url                    : string 
+  #   year                   : integer 
+  #   reset_password_token   : string 
+  #   reset_password_sent_at : datetime 
+  #   remember_created_at    : datetime 
+  #   sign_in_count          : integer 
+  #   current_sign_in_at     : datetime 
+  #   last_sign_in_at        : datetime 
+  #   current_sign_in_ip     : string 
+  #   last_sign_in_ip        : string 
   # =======================
 
   # Include default devise modules. Others available are:
