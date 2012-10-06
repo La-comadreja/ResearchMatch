@@ -1,113 +1,79 @@
-<h2>Sign up</h2>
+<% content_for :title, "Set Up Profile" %>
 
-<%= form_for(resource, :as => resource_name, :html => { :class => 'form-horizontal'}, :url => registration_path(resource_name)) do |f| %>
-  
-<br /> <br />
-<fieldset>
-<font color="red">*</font>
-		<div class="control-group <% if resource.errors[:name].present? %>error<% end %>">
-		<%= f.label 'Full Name', :class => 'control-label' %>
-		  <div class="controls">
-		    <%= f.text_field :name %>
-				<% if resource.errors[:name].present? %>
-					<span class="help-inline">Name <%= strip(resource.errors[:name]) %></span>
-				<% end %>
-		  </div>
-		</div>
+<h1>Set Up Profile</h1>
+<%= stylesheet_link_tag "user" %>
 
-		<div class="control-group <% if resource.errors[:email].present? %>error<% end %>">
-		<%= f.label :email, :class => 'control-label' %>
-		  <div class="controls">
-		    <%= f.email_field :email %>
-				<% if resource.errors[:email].present? %>
-					<span class="help-inline">Email <%= strip(resource.errors[:email]) %></span>
-				<% end %>
-		  </div>
-		</div>
+<%= image_tag "../images/new_user_steps_01.png", :border=>0 %>
+<%= error_messages_for :user %>
 
-		<div class="control-group <% if resource.errors[:password].present? %>error<% end %>">
-		<%= f.label :password, :class => 'control-label' %>
-		  <div class="controls">
-		    <%= f.password_field :password %>
-				<% if resource.errors[:password].present? %>
-					<span class="help-inline">Password <%= strip(resource.errors[:password]) %></span>
-				<% end %>
-		  </div>
-		</div>
+<% form_for :user, :url => users_path do |f| -%>
 
-		<div class="control-group <% if resource.errors[:password_confirmation].present? %>error<% end %>">
-		<%= f.label :password_confirmation, :class => 'control-label' %>
-		  <div class="controls">
-		    <%= f.password_field :password_confirmation %>
-				<% if resource.errors[:password_confirmation].present? %>
-					<span class="help-inline"><%= strip(resource.errors[:password_confirmation]) %></span>
-				<% end %>
-		  </div>
-		</div>
+<div id="signup_fields">
 
-		<div class="control-group <% if resource.errors[:currentSchool].present? %>error<% end %>">
-		<%= f.label 'School Affiliation', :class => 'control-label' %>
-		  <div class="controls">
-		    <%= f.text_field :currentSchool %>
-				<% if resource.errors[:currentSchool].present? %>
-					<span class="help-inline">School affiliation <%= strip(resource.errors[:currentSchool]) %></span>
-				<% end %>
-		  </div>
-		</div>
+    <!-- Step 1 -->
+    <div id="step1">
+      <div id="full_name_field">
+        <p><%= label_tag 'name', 'Full Name' %>:<br/>
+	  <%= f.text_field :name %></p>
+      </div>
 
-		<div class="control-group <% if resource.errors[:position].present? %>error<% end %>">
-		<%= f.label 'Position', :class => 'control-label' %>
-		  <div class="controls">
-		    <%= select_tag 'user[position]', options_for_select([ 'Undergraduate', 'Graduate', 'Faculty', 'Staff', 'Other']) %>
-				<% if resource.errors[:position].present? %>
-					<span class="help-inline">Position <%= strip(resource.errors[:position]) %></span>
-				<% end %>
-		  </div>
-		</div>
+      <div id="email_field">
+          <p><%= label_tag 'email', 'E-mail address' %> (All ResearchMatch-associated messages will be sent to this address):<br/>  
+          <%= f.text_field :email %></p>
+      </div>
 
-		<div class="control-group <% if resource.errors[:summary].present? %>error<% end %>">
-		<%= f.label :summary, :class => 'control-label' %>
-		  <div class="controls">
-		    <%= f.text_area :summary %>
-				<% if resource.errors[:summary].present? %>
-					<span class="help-inline">Summary <%= strip(resource.errors[:summary]) %></span>
-				<% end %>
-		  </div>
-		</div>
+      <div id="password_field">
+          <%= label_tag 'password' %>:<br/>
+          <%= f.password_field :password %>
+          <br />
+          <%= label_tag 'password_confirmation', 'Confirm password (enter it again)' %>:<br/>
+          <%= f.password_field :password_confirmation %>
+      </div>
+   </div>
 
-		<div class="control-group <% if resource.errors[:courses].present? %>error<% end %>">
-		<%= f.label 'Courses', :class => 'control-label' %>
-		  <div class="controls">
-		    <%= f.text_area :courses %>
-				<% if resource.errors[:courses].present? %>
-					<span class="help-inline">Courses <%= strip(resource.errors[:courses]) %></span>
-				<% end %>
-		  </div>
-		</div>
+    <!-- Step 2 -->
+    <div id="step2">
+      <br/>
+      <%= submit_tag 'Sign Up Now' %> or <b>continue below</b>.
+      <br/><br/><br/>
 
-		<div class="control-group <% if resource.errors[:gpa].present? %>error<% end %>">
-		<%= f.label :gpa, :class => 'control-label' %>
-		  <div class="controls">
-		    <%= select_tag 'user[gpa]', options_for_select(['A+', 'A', 'B+', 'B', 'C+', 'C', 'D+', 'D']) %>
-				<% if resource.errors[:gpa].present? %>
-					<span class="help-inline">GPA <%= strip(resource.errors[:gpa]) %></span>
-				<% end %>
-		  </div>
-		</div>
+      <i><b>Note:</b> The rest of this information is optional, but it may increase your chances of landing a research position. <br />
+      Don't feel obligated to fill this in right now -- you can always do so later by clicking the "Edit Profile" tab near the top of the page.</i>
 
-		<div class="control-group <% if resource.errors[:otherInfo].present? %>error<% end %>">
-		<%= f.label 'Other Info (Relevant Experiences, Awards, etc)', :class => 'control-label' %>
-		  <div class="controls">
-		    <%= f.text_area :otherInfo %>
-				<% if resource.errors[:otherInfo].present? %>
-					<span class="help-inline">Other Info <%= strip(resource.errors[:otherInfo]) %></span>
-				<% end %>
-		  </div>
-		</div>
+      <br>
+      <br>
 
-<div class="form-actions">
-  <%= f.submit "Sign up", :class => 'btn primary large' %></div>
-</fieldset>
-<% end %>
+      <%= image_tag "../images/new_user_steps_02.png", :border => 0 %>
 
-<%= render "links" %>
+      <br />
+      
+
+      <div class="ui-widget">
+      Courses (please enter the names of your courses, separated by commas, e.g. <i>CS194, CS61A</i>):<br />
+      <%= text_field :course, :name, :class => 'wide'  %>
+      <br />
+      </div>
+
+
+      <div class="ui-widget">
+      <br />
+      Interests -- what research categories are you interested in? (please enter the names of categories, separated by commas, 
+              e.g. <i>algorithms, security, signal processing</i>):<br />
+      <%= text_field :category, :name, :class => 'wide'  %>
+      <br />
+      </div>
+      
+      <div class="ui-widget">
+      <br />
+      Programming languages in which you are proficient: <br />
+      <%= text_field :proglang, :name, :class => 'wide' %>
+      <br />
+      </div>
+    </div>
+</div>
+
+<br />
+<%= submit_tag 'Sign Up' %>
+<br /><br />
+
+<% end # form_for :user -%>

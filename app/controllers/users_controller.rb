@@ -41,6 +41,8 @@ class UsersController < ApplicationController
       end
 
       @user.name  = @user.ldap_person_full_name
+      @user.first_name = person.first_name
+      @user.last_name = person.last_name
       @user.email = person.email
       @user.update_user_type
       
