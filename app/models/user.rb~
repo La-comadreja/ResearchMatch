@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   #   name                   : string 
   #   login                  : string 
   #   email                  : string 
+  #   crypted_password       : string 
+  #   password_salt          : string 
   #   persistence_token      : string 
   #   single_access_token    : string 
   #   perishable_token       : string 
@@ -35,6 +37,13 @@ class User < ActiveRecord::Base
   #   last_sign_in_ip        : string 
   # =======================
 
+  # Include default devise modules. Others available are:
+  # :token_authenticatable, :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable, :encryptable,
+         :recoverable, :rememberable, :trackable, :validatable
+
+  # Setup accessible (or protected) attributes for your model
+  attr_accessible :email, :password, :password_confirmation, :remember_me
   include AttribsHelper
 
   # Authlogic
@@ -240,7 +249,7 @@ class User < ActiveRecord::Base
 #          #raise StandardError, "couldn't determine user type for login #{self.login}"
 #          self.user_type = User::Types::Undergrad
 #        end # employee/student
-#    end # stub
+    end # stub
 
     self.update_attribute(:user_type, self.user_type) if options[:save] || options[:update]
     self.user_type
