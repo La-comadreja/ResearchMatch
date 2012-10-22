@@ -126,6 +126,7 @@ class User < ActiveRecord::Base
   # Downcases email address
   def email=(value)
     write_attribute :email, (value && !value.empty? ? value.downcase : self.email)
+    self.login = email
   end
   
   
@@ -203,14 +204,14 @@ class User < ActiveRecord::Base
 
 
   # @return [UCB::LDAP::Person] for this User
-  def ldap_person
-    @person ||= UCB::LDAP::Person.find_by_uid(self.login) if self.login
-  end
+  #def ldap_person
+  #  @person ||= UCB::LDAP::Person.find_by_uid(self.login) if self.login
+  #end
 
   # @return [String] Full name, as provided by LDAP
-#  def ldap_person_full_name
-#    "#{self.ldap_person.firstname} #{self.ldap_person.lastname}".titleize
-#  end
+  def ldap_person_full_name
+      self.name
+  end
 
 
   # Updates this User's role, based on the
