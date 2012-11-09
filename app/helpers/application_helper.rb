@@ -10,16 +10,17 @@ module ApplicationHelper
 	    end
 	end
 
-  def current_user
+#  def current_user
     # TODO: transition this out in favor of @current_user
-    ActiveSupport::Deprecation.warn "current_user is deprecated in favor of @current_user", caller
-    @current_user
-  end
+#    ActiveSupport::Deprecation.warn "current_user is deprecated in favor of @current_user", caller
+#    @current_user
+#  end
 
   def logged_in?
-    # TODO: transition out in favor of @current_user
-    ActiveSupport::Deprecation.warn "logged_in? is deprecated in favor of @current_user", caller
-    !!@current_user
+    ## TODO: transition out in favor of @current_user
+    #ActiveSupport::Deprecation.warn "logged_in? is deprecated in favor of @current_user", caller
+    #!!@current_user
+    current_user.present?
   end
 
   # Checks if user is logged in as an admin.

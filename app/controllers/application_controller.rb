@@ -28,11 +28,11 @@ class ApplicationController < ActionController::Base
     raise if Rails.test?
   end
 
-  def current_user
-    # TODO: transition this out in favor of @current_user
-    ActiveSupport::Deprecation.warn "current_user is deprecated in favor of @current_user", caller
-    @current_user
-  end
+  #def current_user
+  #  # TODO: transition this out in favor of @current_user
+  #  ActiveSupport::Deprecation.warn "current_user is deprecated in favor of @current_user", caller
+  #  @current_user
+  #end
 
   # Puts a flash[:notice] error message and redirects if condition isn't true.
   # Returns true if redirected.

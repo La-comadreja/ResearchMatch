@@ -22,6 +22,8 @@ gem 'nokogiri'
 gem 'actionmailer-with-request', '~> 0.3'
 gem 'jquery-rails', '>= 1.0.12'
 gem "devise", ">= 1.5.0"
+gem 'pry-rails'
+gem 'pry-nav'
 
 # Deploy with Capistrano
 gem 'capistrano'
