@@ -4,11 +4,8 @@ class DashboardController < ApplicationController
   # before_filter :login_required
   
   include CASControllerIncludes
-      
-  #CalNet / CAS Authentication
-#  before_filter :goto_cas_unless_logged_in  #CASClient::Frameworks::Rails::Filter
-  # before_filter :setup_cas_user  
-  before_filter :rm_login_required
+  before_filter authenticate_user!
+  #before_filter :rm_login_required
   
   def index
       @departments = Department.all

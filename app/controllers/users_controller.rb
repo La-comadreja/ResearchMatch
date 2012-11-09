@@ -22,34 +22,32 @@ class UsersController < ApplicationController
   
   # Don't render new.rhtml; instead, create the user immediately 
   # and redirect to the edit profile page.
-  def new
-      # Make sure user isn't already signed up
-      if User.exists?(:login => session[:cas_user]) then
-        flash[:warning] = "You're already signed up."
-        redirect_to dashboard_path
-        return
-      end
+  #def new
+  #    # Make sure user isn't already signed up
+  #    if User.exists?(:login => session[:cas_user]) then
+  #      flash[:warning] = "You're already signed up."
+  #      redirect_to dashboard_path
+  #      return
+  #    end
+  #
+  #    #@user = User.new(:login => session[:cas_user].to_s)
+  #    person = @user.ldap_person
+  #
+  #    if person.nil?
+  #      # TODO: what to do here?
+  #      logger.warn "UsersController.new: Failed to find LDAP::Person for uid #{session[:cas_user]}"
+  #      flash[:error] = "A directory error occurred. Please make sure you've authenticated with CalNet and try again."
+  #      redirect_to '/'
+  #    end
+  #
+  #    @user.name  = person.full_name
+  #    @user.email = person.email
+  #    @user.update_user_type
+  #
+  #    # create
+  #    create
+  #end
 
-      @user = User.new(:login => session[:cas_user].to_s)
-      person = @user.ldap_person
-
-      if person.nil?
-        # TODO: what to do here?
-        logger.warn "UsersController.new: Failed to find LDAP::Person for uid #{session[:cas_user]}"
-        flash[:error] = "A directory error occurred. Please make sure you've authenticated with CalNet and try again."
-        redirect_to '/'
-      end
-
-      @user.name  = @user.ldap_person_full_name
-      @user.first_name = person.first_name
-      @user.last_name = person.last_name
-      @user.email = person.email
-      @user.update_user_type
-      
-      # create
-      create
-  end
- 
   def create
     # logout_keeping_session!
 
@@ -60,8 +58,8 @@ class UsersController < ApplicationController
       redirect_to '/'
     end
 
-    @user = User.new(params[:user])
-    @user.login = session[:cas_user]
+    # @user = User.new(params[:user])
+    # @user.login = session[:cas_user]
     # @user.name = @user.ldap_person_full_name
 
     # For some reason, the email doesn't persist when coming from 

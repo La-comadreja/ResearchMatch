@@ -5,7 +5,6 @@ class UserSessionsController < ApplicationController
 
   def new
 #   redirect_to create_path
-    pry
     redirect_to profile_path
 
 #    if login_user!(User.find_by_login(session[:cas_user]))
