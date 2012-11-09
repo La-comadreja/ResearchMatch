@@ -1,0 +1,61 @@
+
+
+#undergrad
+quentin:
+  id:                        1
+  name:                     quentin
+  login:                     1
+  email:                     quentin@berkeley.edu
+  persistence_token:         b6589fc6ab0dc82cf12099d1c2d40ab994e8410c
+  single_access_token:       356a192b7913b04c54574d18c28d46e6395428ab # SHA1('0')
+  perishable_token:          555186c1e090bfcb0f6a130794b0bc753c78346a # 'monkey'
+  login_count:               0
+  failed_login_count:        0
+  last_request_at:           <%= 5.days.ago.to_s :db  %>
+  current_login_at:          <%= 1.day.ago.to_s :db  %>
+  last_login_at:             <%= 2.days.ago.to_s :db %>
+  current_login_ip:          <%= 235908.to_s %>
+  last_login_ip:             <%= 235908.to_s %>
+  user_type:                 0
+
+
+
+
+      
+# grad
+aaron:
+  id:                        2
+  name:                     aaron
+  login:                     2
+  email:                     aaron@berkeley.edu
+  persistence_token:         c6581fc6ab0dc82cf12099d1c2d40ab994e8410c
+  single_access_token:       456a192b7913b04c54574d18c28d46e6395428ab # SHA1('0')
+  perishable_token:          655186c1e090bfcb0f6a130794b0bc753c78346a # 'monkey'
+  login_count:               0
+  failed_login_count:        0
+  last_request_at:           <%= 5.days.ago.to_s :db  %>
+  current_login_at:          <%= 1.day.ago.to_s :db  %>
+  last_login_at:             <%= 2.days.ago.to_s :db %>
+  current_login_ip:          <%= 235909.to_s %>
+  last_login_ip:             <%= 235909.to_s %>
+  user_type:                 1
+
+
+
+# faculty
+gary:
+  id:                        3
+  name:                     gary
+  login:                     3
+  email:                     gary@berkeley.edu
+  persistence_token:         c65213c6ab0dc82cf12099d1c2d40ab994e8410c
+  single_access_token:       356a192b7913b04c54574d18c28d46e6395428ab # SHA1('0')
+  perishable_token:          255186c1e090bfcb0f6a130794b0bc753c78346a # 'monkey'
+  login_count:               0
+  failed_login_count:        0
+  last_request_at:           <%= 5.days.ago.to_s :db  %>
+  current_login_at:          <%= 1.day.ago.to_s :db  %>
+  last_login_at:             <%= 2.days.ago.to_s :db %>
+  current_login_ip:          <%= 235919.to_s %>
+  last_login_ip:             <%= 235919.to_s %>
+  user_type:                 2

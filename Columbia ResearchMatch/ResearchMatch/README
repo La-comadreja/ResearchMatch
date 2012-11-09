@@ -1,0 +1,6 @@
+ResearchMatch
+-------------
+
+ResearchMatch is an open-source Web application written in Rails 3, which is designed to facilitate the matching of students (especially, but not necessarily, undergraduate students) to research positions offered by faculty at universities. ResearchMatch uses tags and user-specified parameters to suggest research positions for students, manages the application to jobs by students and allows for the submission of a resume and/or transcript in the research application.
+
+ResearchMatch initiatives presently exist at UC-Berkeley and Columbia University.  The service is available to the UC-Berkeley community at researchmatch.heroku.com, and to the Columbia community at www.researchmat.ch.  For more information, contact Rebecca Sealfon (rebecca@researchmat.ch).
