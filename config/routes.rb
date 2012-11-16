@@ -1,7 +1,8 @@
 ResearchMatch::Application.routes.draw do
 
-
-  devise_for :users
+  devise_for :users do
+    get "/users/sign_out" => "devise/sessions#destroy", :as => :destroy_user_session
+  end
 
   get "contact_us/contact", :as => :contact_us
   post "contact_us/send_email", :as => :feedback_email_link
