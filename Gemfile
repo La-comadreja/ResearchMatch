@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', ['~> 3.1.0']
+gem 'rails', ['3.0.17']
 
 # Bundle edge Rails instead:
 #gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -19,7 +19,7 @@ gem 'acts_as_taggable_on_steroids', :require => ['acts_as_taggable', 'tags_helpe
 gem 'net-ldap', :require => 'net/ldap'
 gem 'nokogiri'
 gem 'actionmailer-with-request', '~> 0.3'
-gem 'jquery-rails', '>= 1.0.12'
+gem 'jquery-rails', '1.0.19'
 #gem "devise", :git => "git://github.com/plataformatec/devise.git"
 gem "devise", "~> 1.5.3"
 #gem 'devise-encryptable'
@@ -27,8 +27,8 @@ gem 'pry-rails'
 gem 'pry-nav'
 gem 'activerecord'
 gem 'activerecord-deprecated_finders', :git => 'git://github.com/rails/activerecord-deprecated_finders.git'
-gem 'railties', '>= 3.1.0'
-gem 'prototype-rails'
+gem 'railties', '3.0.17'
+#gem 'prototype-rails'
 
 # Deploy with Capistrano
 gem 'capistrano'
