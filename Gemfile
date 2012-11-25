@@ -21,8 +21,8 @@ gem 'nokogiri'
 gem 'actionmailer-with-request', '~> 0.3'
 gem 'jquery-rails', '>= 1.0.12'
 #gem "devise", :git => "git://github.com/plataformatec/devise.git"
-gem "devise", ">= 1.5.0"
-gem 'devise-encryptable'
+gem "devise", "~> 1.5.3"
+#gem 'devise-encryptable'
 gem 'pry-rails'
 gem 'pry-nav'
 gem 'activerecord'

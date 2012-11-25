@@ -18,21 +18,29 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="ZenTest (v4.8.2, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="actionmailer (v3.1.8, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="actionmailer-with-request (v0.4.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="actionpack (v3.1.8, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="activemodel (v3.1.8, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="activerecord (v3.1.8, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="activeresource (v3.1.8, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="activesupport (v3.1.8, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="acts_as_taggable_on_steroids (v1.2, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="addressable (v2.3.2, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="annotate (v2.5.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="authlogic (v3.1.3@7aed57, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="autotest-rails (v4.1.2, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bcrypt-ruby (v3.0.1, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="builder (v3.0.4, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.2.2, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="capistrano (v2.13.5, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="capybara (v2.0.1, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="childprocess (v0.3.6, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coderay (v1.0.8, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="cucumber (v1.2.1, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="cucumber-rails (v1.3.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="database_cleaner (v0.9.1, RVM: ruby-1.9.2-head) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="devise (v@3696cb, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="devise (v2.1.2, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="devise-encryptable (v0.1.1, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.1.3, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
@@ -41,15 +49,20 @@
     <orderEntry type="library" scope="PROVIDED" name="excon (v0.16.10, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="faraday (v0.8.4, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="faraday_middleware (v0.9.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ffi (v1.2.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="gherkin (v2.11.5, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hashie (v1.2.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="heroku (v2.33.1, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="heroku-api (v0.3.7, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="highline (v1.6.15, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.1, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="http_parser.rb (v0.5.3, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.1, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v2.1.3, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="json (v1.7.5, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="launchy (v2.1.2, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="libwebsocket (v0.1.6.1, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="mail (v2.3.3, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="method_source (v0.8.1, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.19, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.2.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
@@ -62,7 +75,9 @@
     <orderEntry type="library" scope="PROVIDED" name="net-ssh-gateway (v1.1.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="netrc (v0.7.7, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.5.5, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="orm_adapter (v0.4.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="polyglot (v0.3.3, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="prototype-rails (v3.1.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pry (v0.9.10, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pry-nav (v0.2.2, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pry-rails (v0.2.2, RVM: ruby-1.9.2-head) [gem]" level="application" />
@@ -71,12 +86,20 @@
     <orderEntry type="library" scope="PROVIDED" name="rack-mount (v0.8.3, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-ssl (v1.3.2, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.2, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails (v3.1.8, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="railties (v3.1.8, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rake (v10.0.2, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v3.12, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rest-client (v1.6.7, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-core (v2.12.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-expectations (v2.12.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-mocks (v2.12.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-rails (v2.12.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubyzip (v0.9.9, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="selenium-webdriver (v2.26.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="simple_oauth (v0.1.9, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="slop (v3.3.3, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sprockets (v2.0.4, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sqlite3 (v1.3.6, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thor (v0.14.6, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tilt (v1.3.3, RVM: ruby-1.9.2-head) [gem]" level="application" />
@@ -85,7 +108,9 @@
     <orderEntry type="library" scope="PROVIDED" name="twitter-stream (v0.1.16, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v0.3.35, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="warden (v1.2.1, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="websocket (v1.0.4, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="will_paginate (v3.0.3, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="xpath (v1.0.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="yard (v0.8.3, RVM: ruby-1.9.2-head) [gem]" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
