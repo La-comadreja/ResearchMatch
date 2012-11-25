@@ -1,0 +1,35 @@
+<%# Basic user application-related info
+    @param user [User]
+-%>
+<%- raise ArgumentError.new('No User provided') unless user -%>
+<%-
+  [
+    [ :name,           'Full Name'],
+    [ :email,          'Email'    ],
+
+    :separator,
+
+    [ :year,           'Year'     ],
+    [ :units,          'Units'    ],
+    [ :free_hours,     'Hours/wk' ],
+    [ :summer,         'Summer'   ],
+
+    :separator,
+
+    [ :research_blurb, 'Motivation'],
+    [ :experience,     'Experience'],
+
+    [ :url,            'URL'      ]
+  ].each do |attr, label|
+-%>
+<%- if attr == :separator -%>
+
+<%- else
+    val = user.send(attr)
+    val = {true=>'Yes',false=>'No'}[val] if (!!val == val) # if val is a boolean
+    val = (val.nil? or val.blank?) ? 'Not specified' : val
+    val = val.to_s.html_safe
+-%>
+  <%= "#{label}:".ljust(14) %><%= val %>
+<%- end -%>
+<%- end -%>
