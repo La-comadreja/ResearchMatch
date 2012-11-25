@@ -20,8 +20,8 @@ gem 'net-ldap', :require => 'net/ldap'
 gem 'nokogiri'
 gem 'actionmailer-with-request', '~> 0.3'
 gem 'jquery-rails', '>= 1.0.12'
-gem "devise", :git => "git://github.com/plataformatec/devise.git"
-#gem "devise", ">= 1.5.0"
+#gem "devise", :git => "git://github.com/plataformatec/devise.git"
+gem "devise", ">= 1.5.0"
 gem 'devise-encryptable'
 gem 'pry-rails'
 gem 'pry-nav'

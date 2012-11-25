@@ -33,6 +33,7 @@
     <orderEntry type="library" scope="PROVIDED" name="cucumber-rails (v1.3.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="database_cleaner (v0.9.1, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="devise (v@3696cb, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="devise-encryptable (v0.1.1, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.1.3, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="eventmachine (v1.0.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
