@@ -128,7 +128,7 @@ GEM
     mime-types (1.19)
     multi_json (1.3.7)
     multipart-post (1.1.5)
-    mysql2 (0.3.11)
+    mysql2 (0.2.7)
     net-ldap (0.3.1)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
@@ -239,7 +239,7 @@ DEPENDENCIES
   exception_notification
   heroku
   jquery-rails (= 1.0.19)
-  mysql2
+  mysql2 (= 0.2.7)
   net-ldap
   nokogiri
   pry-nav

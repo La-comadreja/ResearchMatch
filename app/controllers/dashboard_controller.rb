@@ -1,11 +1,11 @@
 class DashboardController < ApplicationController
+  include Devise::Controllers::Helpers
   # This filter is probably not necessary because of the CAS authentication stuff.
   # Hence, it's commented out:
-  # before_filter :login_required
-  
-  include CASControllerIncludes
+  before_filter :login_required
+
+  #include CASControllerIncludes
   before_filter authenticate_user!
-  #before_filter :rm_login_required
   
   def index
       @departments = Department.all

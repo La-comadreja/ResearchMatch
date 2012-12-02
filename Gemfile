@@ -43,7 +43,7 @@ end
 # Development
 group :development do
   gem 'yard'
-  gem 'mysql2'    # rails 3.0.x and mysql >= .3 don't mix
+  gem 'mysql2', '0.2.7'    # rails 3.0.x and mysql >= .3 don't mix
   gem 'annotate', '2.5.0'
 end
 
