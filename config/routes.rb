@@ -48,6 +48,7 @@ ResearchMatch::Application.routes.draw do
   get  '/profile'   	=> 'users#profile', :as => :profile
   get  '/new'	  	=> 'users#new', :as => :new
   get  '/create'	=> 'users#create', :as => :create
+  #get  '/edit'    => 'users#edit', :as => :edit
 
   # Home
   get  '/' => 'home#index', :as => :home

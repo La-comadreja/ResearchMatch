@@ -58,8 +58,8 @@
   		        <li><%= image_tag "plus_icon.png", :size => "16x16" %> <%= link_to "Post a Listing", new_job_path %></li>
 		        <%# end %>
 		        
-		        <% if @current_user.present? %>
-    		        <li><%= link_to "Edit Profile", edit_user_url(@current_user) %></li> 
+		        <% if user_signed_in? %>
+    		        <li><%= link_to "Edit Profile", edit_user_url(@current_user) %></li>
 		        <% end %>
 		        
 		    </ul>
