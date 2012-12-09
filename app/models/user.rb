@@ -199,7 +199,8 @@ class User < ActiveRecord::Base
   end
 
   def can_post?
-    [User::Types::Grad, User::Types::Faculty, User::Types::Admin].include? self.user_type
+    #[User::Types::Grad, User::Types::Faculty, User::Types::Admin].include? self.user_type
+    true
   end
 
 

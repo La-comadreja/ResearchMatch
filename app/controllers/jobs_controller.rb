@@ -5,18 +5,19 @@ class JobsController < ApplicationController
   include CASControllerIncludes
   include AttribsHelper
   
-  skip_before_filter :verify_authenticity_token, :only => [:auto_complete_for_category_name, 
-		:auto_complete_for_course_name, :auto_complete_for_proglang_name]
+  #skip_before_filter :verify_authenticity_token, :only => [:auto_complete_for_category_name,
+		#:auto_complete_for_course_name, :auto_complete_for_proglang_name]
   auto_complete_for :category, :name
   auto_complete_for :course, :name
   auto_complete_for :proglang, :name
   
-  #CalNet / CAS Authentication
+  # Devise Authentication
+  before_filter :authenticate_user!
   #before_filter CASClient::Frameworks::Rails::Filter
   #before_filter :goto_cas_unless_logged_in
     
   # Ensures that only logged-in users can create, edit, or delete jobs
-  before_filter :rm_login_required #, :except => [ :index, :show ]
+  #before_filter :rm_login_required #, :except => [ :index, :show ]
   
   # Ensures that only the user who created a job -- and no other users -- can edit 
   # or destroy it.
@@ -350,7 +351,7 @@ class JobsController < ApplicationController
 	end
 	
 	def check_post_permissions
-	    if not @current_user.can_post?
+	    if not current_user.can_post?
 	        flash[:error] = "Sorry, you don't have permissions to post a new listing. Become a grad student or ask to be hired as faculty."
 	        redirect_to :controller => 'dashboard', :action => :index
 	    end
