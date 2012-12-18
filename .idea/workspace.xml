@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="634db484-1f3d-4c8a-9f8c-8fb000277c90" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20120812151425_add_devise_to_users.rb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/users/edit.html.erb" />
     </list>
     <ignored path="ResearchMatch.iws" />
     <ignored path=".idea/workspace.xml" />
