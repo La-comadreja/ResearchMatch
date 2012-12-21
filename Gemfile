@@ -2,9 +2,6 @@ source 'http://rubygems.org'
 
 gem 'rails', ['3.0.17']
 
-# Bundle edge Rails instead:
-#gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 # Data
 gem 'sqlite3', '>= 1.3.6'
 
@@ -14,21 +11,18 @@ gem 'exception_notification'
 # Misc
 gem 'authlogic', :git => 'git://github.com/binarylogic/authlogic.git'
 gem 'will_paginate', "~> 3.0.pre2"
-#gem 'rubycas-client', :require => ['casclient', 'casclient/frameworks/rails/filter']
 gem 'acts_as_taggable_on_steroids', :require => ['acts_as_taggable', 'tags_helper', 'tag_list', 'tagging', 'tag']
 gem 'net-ldap', :require => 'net/ldap'
 gem 'nokogiri'
 gem 'actionmailer-with-request', '~> 0.3'
 gem 'jquery-rails', '1.0.19'
-#gem "devise", :git => "git://github.com/plataformatec/devise.git"
-gem "devise", "~> 1.5.3"
-#gem 'devise-encryptable'
+gem 'devise', '~> 1.5.3'
+gem 'omniauth'
 gem 'pry-rails'
 gem 'pry-nav'
 gem 'activerecord'
 gem 'activerecord-deprecated_finders', :git => 'git://github.com/rails/activerecord-deprecated_finders.git'
 gem 'railties', '3.0.17'
-#gem 'prototype-rails'
 
 # Deploy with Capistrano
 gem 'capistrano'
