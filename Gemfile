@@ -44,10 +44,11 @@ end
 # Testing
 group :test do
   gem 'autotest-rails'
-  gem 'rspec-rails'
-  gem 'cucumber-rails'
   gem 'capybara'
+  gem 'cucumber-rails'
   gem 'database_cleaner'
+  gem 'email_spec'
+  gem 'rspec-rails'
   gem 'simplecov'
 end
 
