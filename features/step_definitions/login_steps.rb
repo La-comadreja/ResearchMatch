@@ -1,10 +1,11 @@
 Given /^I am logged in as "(.*)"$/ do |user|
-  #CASClient::Frameworks::Rails::Filter.fake(user)
+  @user = User.new(:email => 'test@columbia.edu', :password => 'password', :password_confirmation => 'password')
+  sign_in @user
   #visit "/login"
-  OmniAuth.config.add_mock(:cas, {
-    :uid => user
-  })
-  visit "/auth/cas"
+  #OmniAuth.config.add_mock(:cas, {
+  #  :uid => user
+  #})
+  #visit "/auth/cas"
 end
 
 When /^I set "(.*)" as admin$/ do |user|
