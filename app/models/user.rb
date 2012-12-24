@@ -1,7 +1,6 @@
 require 'digest/sha1'
 
 class User < ActiveRecord::Base
-
   # === List of columns ===
   #   id                     : integer 
   #   name                   : string 
@@ -52,7 +51,6 @@ class User < ActiveRecord::Base
     #c.merge_validates_length_of_login_field_options :within => 1..100
     # so that logins can be 1 character in length even; 'login' is provided
     # by CAS so we don't want to artificially limit the values we get for it.
-
     c.validate_email_field = true
   end
 
