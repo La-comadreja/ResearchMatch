@@ -192,6 +192,7 @@ ActiveRecord::Schema.define(:version => 20121202224402) do
     t.integer  "year"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
+    t.string   "remember_token"
     t.datetime "remember_created_at"
     t.integer  "sign_in_count",          :default => 0
     t.datetime "current_sign_in_at"

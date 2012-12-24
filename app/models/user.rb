@@ -29,6 +29,7 @@ class User < ActiveRecord::Base
   #   year                   : integer 
   #   reset_password_token   : string 
   #   reset_password_sent_at : datetime 
+  #   remember_token         : string 
   #   remember_created_at    : datetime 
   #   sign_in_count          : integer 
   #   current_sign_in_at     : datetime 

@@ -13,8 +13,8 @@ Story: Creating an account
   #
   Scenario: Anonymous user can start creating an account
     Given an anonymous user
-    When  she goes to /signup
-    Then  she should be at the 'users/new' page
+    When  she goes to /register
+    Then  she should be at the 'users/sign_up' page
      And  the page should look AWESOME
      And  she should see a <form> containing a textfield: Login, textfield: Email, password: Password, password: 'Confirm Password', submit: 'Sign up'
 
