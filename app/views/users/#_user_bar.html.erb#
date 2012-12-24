@@ -1,6 +1,0 @@
-<div id="user-bar-greeting">
-  _path 
-    # :class => 'user-bar-action' %><%= ' via CalNet' unless session[:cas_user].present?
-									%> to access our listings.
-  <% end %>
-</div>
