@@ -1,0 +1,45 @@
+<p>
+  Dear <b><%= @faculty_sponsor_names %></b>,
+</p>
+
+<p>
+Someone has posted a research listing at ResearchMatch, indicating you
+as a faculty sponsor. For this listing to be viewed on the
+website, we'll need your confirmation to prove it's authentic. Here
+is the content of the post that was made:
+</p>
+
+<p>
+  <h3><%= @job.title %></h3>
+  <table>
+    <%-
+      [
+        [ 'Faculty Sponsor', @job.faculties.collect(&:name).join(', ') ],
+        [ 'Description', @job.desc ]
+      ].each do |k,v|
+    -%>
+    <tr>
+      <td><b><%= k %></b></td>
+      <td><%= v %></td>
+    </tr>
+    <%- end -%>
+  </table>
+</p>
+
+<p>
+To confirm this listing, please click <%= link_to 'here', activation_url(@job) %>, or copy and paste the following link into your browser:<br/>
+<p>
+<%= link_to activation_url(@job), activation_url(@job) %>
+</p>
+</p>
+
+<p>
+If you believe you have received this e-mail in error, please disregard this notice.
+</p>
+
+<p>
+Regards,<br/><br/>
+<b>UC Berkeley ResearchMatch</b>
+<br/>
+<%= root_url %>
+</p>

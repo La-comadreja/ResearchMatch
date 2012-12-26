@@ -1,0 +1,10 @@
+ResearchMatch
+-------------
+
+ResearchMatch is an open source Web application written in Rails 3 designed
+to facilitate the matching of students (in particular, but not necessarily,
+undergraduate students) to research positions offered by faculty at
+university. ResearchMatch uses tags and user-specified parameters to
+suggest research positions for students, manages the application to jobs
+by students and allows for the submission of a resume and/or transcript
+in the research application.
