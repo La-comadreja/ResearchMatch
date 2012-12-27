@@ -12,19 +12,18 @@ gem 'pg', '~> 0.14.1'
 gem 'exception_notification'
 
 # Misc
-gem 'authlogic',
-    :git => 'git://github.com/binarylogic/authlogic.git'
-gem 'will_paginate', "~> 3.0.pre2"
-gem 'rubycas-client', :require => ['casclient', 'casclient/frameworks/rails/filter']
-gem 'acts_as_taggable_on_steroids', :require => ['acts_as_taggable', 'tags_helper', 'tag_list', 'tagging', 'tag']
-gem 'net-ldap', :require => 'net/ldap'
-gem 'nokogiri'
 gem 'actionmailer-with-request', '~> 0.3'
-gem 'jquery-rails', '>= 1.0.12'
 gem 'activerecord'
 gem 'activerecord-postgresql-adapter'
+gem 'acts_as_taggable_on_steroids', :require => ['acts_as_taggable', 'tags_helper', 'tag_list', 'tagging', 'tag']
+gem 'authlogic', :git => 'git://github.com/binarylogic/authlogic.git'
+gem 'jquery-rails', '>= 1.0.12'
+gem 'net-ldap', :require => 'net/ldap'
+gem 'nokogiri'
 gem 'omniauth'
 gem 'omniauth-cas'
+gem 'rubycas-client', :require => ['casclient', 'casclient/frameworks/rails/filter']
+gem 'will_paginate', "~> 3.0.pre2"
 
 # Deploy with Capistrano
 gem 'capistrano'
@@ -39,8 +38,8 @@ end
 # Development
 group :development do
   gem 'mysql2', '< 0.3.0'  # rails 3.0.x and mysql >= .3 don't mix
-  gem 'yard'
   gem 'ruby-debug19'
+  gem 'yard'
 end
 
 # Testing
