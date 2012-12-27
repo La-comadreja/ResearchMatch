@@ -765,3 +765,265 @@ Completed 200 OK in 370ms (Views: 22.0ms | ActiveRecord: 5.0ms)
 Started GET "/proglangs/json" for 127.0.0.1 at 2012-12-27 13:47:24 -0500
   Processing by ProglangsController#json as JSON
 Completed 200 OK in 289ms (Views: 18.1ms | ActiveRecord: 4.2ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/ras/Documents/research-projects.info/berkeley-omniauth/ResearchMatch/config/environment.rb:5)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from bind at /Users/ras/Documents/research-projects.info/berkeley-omniauth/ResearchMatch/vendor/plugins/ucb_ldap/lib/ucb_ldap.rb:132)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/ras/Documents/research-projects.info/berkeley-omniauth/ResearchMatch/config/environment.rb:5)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from bind at /Users/ras/Documents/research-projects.info/berkeley-omniauth/ResearchMatch/vendor/plugins/ucb_ldap/lib/ucb_ldap.rb:133)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/ras/Documents/research-projects.info/berkeley-omniauth/ResearchMatch/config/environment.rb:5)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from bind at /Users/ras/Documents/research-projects.info/berkeley-omniauth/ResearchMatch/vendor/plugins/ucb_ldap/lib/ucb_ldap.rb:133)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-27 14:01:35 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (1.5ms)
+Rendered users/_search_bar.html.erb (2.6ms)
+Rendered home/index.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 523ms (Views: 96.5ms | ActiveRecord: 22.1ms)
+
+
+Started GET "/proglangs/json" for 127.0.0.1 at 2012-12-27 14:01:36 -0500
+  Processing by ProglangsController#json as JSON
+Completed 200 OK in 407ms (Views: 17.8ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/categories/json" for 127.0.0.1 at 2012-12-27 14:01:37 -0500
+  Processing by CategoriesController#json as JSON
+Completed 200 OK in 346ms (Views: 17.3ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/courses/json" for 127.0.0.1 at 2012-12-27 14:01:37 -0500
+  Processing by CoursesController#json as JSON
+Completed 200 OK in 373ms (Views: 18.3ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/auth/cas" for 127.0.0.1 at 2012-12-27 14:01:38 -0500
+
+
+Started GET "/auth/cas/callback?url=http%3A%2F%2Flocalhost%3A3000%2F&ticket=ST-12-0E3RPpYp10quuDh4tgN7-cas-t2" for 127.0.0.1 at 2012-12-27 14:01:39 -0500
+  Processing by UserSessionsController#new as HTML
+  Parameters: {"url"=>"http://localhost:3000/", "ticket"=>"ST-12-0E3RPpYp10quuDh4tgN7-cas-t2", "provider"=>"cas"}
+Rendered users/_user_bar.html.erb (1.9ms)
+Rendered users/_search_bar.html.erb (2.6ms)
+Rendered common/exception.html.erb within layouts/application (17.9ms)
+ERROR 500: #<NoMethodError: undefined method `email' for nil:NilClass>
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_request.text.erb (1.1ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (0.7ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_session.text.erb (2.0ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (0.7ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_environment.text.erb (17.4ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (4.2ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_backtrace.text.erb (1.1ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (1.4ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/exception_notification.text.erb (69.2ms)
+
+Sent mail to  (150ms)
+Completed 500 Internal Server Error in 2123ms (Views: 35.3ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/auth/cas" for 127.0.0.1 at 2012-12-27 14:01:43 -0500
+
+
+Started GET "/auth/cas/callback?url=http%3A%2F%2Flocalhost%3A3000%2F&ticket=ST-13-LGvSqc6BgsqfVSdocovx-cas-t2" for 127.0.0.1 at 2012-12-27 14:01:43 -0500
+  Processing by UserSessionsController#new as HTML
+  Parameters: {"url"=>"http://localhost:3000/", "ticket"=>"ST-13-LGvSqc6BgsqfVSdocovx-cas-t2", "provider"=>"cas"}
+Rendered users/_user_bar.html.erb (1.5ms)
+Rendered users/_search_bar.html.erb (3.0ms)
+Rendered common/exception.html.erb within layouts/application (18.5ms)
+ERROR 500: #<NoMethodError: undefined method `email' for nil:NilClass>
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_request.text.erb (1.1ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (0.7ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_session.text.erb (2.2ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (0.7ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_environment.text.erb (17.8ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (2.7ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_backtrace.text.erb (1.2ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (1.1ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/exception_notification.text.erb (58.0ms)
+
+Sent mail to  (11ms)
+Completed 500 Internal Server Error in 1130ms (Views: 33.4ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/courses/json" for 127.0.0.1 at 2012-12-27 14:01:45 -0500
+  Processing by CoursesController#json as JSON
+Completed 200 OK in 361ms (Views: 18.6ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/proglangs/json" for 127.0.0.1 at 2012-12-27 14:01:45 -0500
+  Processing by ProglangsController#json as JSON
+Completed 200 OK in 366ms (Views: 17.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/categories/json" for 127.0.0.1 at 2012-12-27 14:01:46 -0500
+  Processing by CategoriesController#json as JSON
+Completed 200 OK in 371ms (Views: 18.9ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/auth/cas" for 127.0.0.1 at 2012-12-27 14:01:47 -0500
+
+
+Started GET "/auth/cas/callback?url=http%3A%2F%2Flocalhost%3A3000%2Fauth%2Fcas%2Fcallback%3Furl%3Dhttp%253A%252F%252Flocalhost%253A3000%252F%26ticket%3DST-13-LGvSqc6BgsqfVSdocovx-cas-t2&ticket=ST-14-aFyRO64nCAxGiPBKrxqm-cas-t2" for 127.0.0.1 at 2012-12-27 14:01:47 -0500
+  Processing by UserSessionsController#new as HTML
+  Parameters: {"url"=>"http://localhost:3000/auth/cas/callback?url=http%3A%2F%2Flocalhost%3A3000%2F&ticket=ST-13-LGvSqc6BgsqfVSdocovx-cas-t2", "ticket"=>"ST-14-aFyRO64nCAxGiPBKrxqm-cas-t2", "provider"=>"cas"}
+Rendered users/_user_bar.html.erb (1.6ms)
+Rendered users/_search_bar.html.erb (3.0ms)
+Rendered common/exception.html.erb within layouts/application (82.6ms)
+ERROR 500: #<NoMethodError: undefined method `email' for nil:NilClass>
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_request.text.erb (1.0ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (0.7ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_session.text.erb (2.2ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (0.7ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_environment.text.erb (16.7ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (3.7ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_backtrace.text.erb (1.2ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (1.0ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/exception_notification.text.erb (58.1ms)
+
+Sent mail to  (18ms)
+Completed 500 Internal Server Error in 1198ms (Views: 101.0ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/proglangs/json" for 127.0.0.1 at 2012-12-27 14:01:50 -0500
+  Processing by ProglangsController#json as JSON
+Completed 200 OK in 365ms (Views: 17.3ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/categories/json" for 127.0.0.1 at 2012-12-27 14:01:50 -0500
+  Processing by CategoriesController#json as JSON
+Completed 200 OK in 367ms (Views: 17.3ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/courses/json" for 127.0.0.1 at 2012-12-27 14:01:51 -0500
+  Processing by CoursesController#json as JSON
+Completed 200 OK in 358ms (Views: 18.7ms | ActiveRecord: 4.7ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/ras/Documents/research-projects.info/berkeley-omniauth/ResearchMatch/config/environment.rb:5)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from bind at /Users/ras/Documents/research-projects.info/berkeley-omniauth/ResearchMatch/vendor/plugins/ucb_ldap/lib/ucb_ldap.rb:133)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-27 14:20:07 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (1.9ms)
+Rendered users/_search_bar.html.erb (2.7ms)
+Rendered home/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 518ms (Views: 97.6ms | ActiveRecord: 21.2ms)
+
+
+Started GET "/courses/json" for 127.0.0.1 at 2012-12-27 14:20:08 -0500
+  Processing by CoursesController#json as JSON
+Completed 200 OK in 375ms (Views: 19.3ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/categories/json" for 127.0.0.1 at 2012-12-27 14:20:09 -0500
+  Processing by CategoriesController#json as JSON
+Completed 200 OK in 301ms (Views: 17.9ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/proglangs/json" for 127.0.0.1 at 2012-12-27 14:20:09 -0500
+  Processing by ProglangsController#json as JSON
+Completed 200 OK in 348ms (Views: 18.0ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-12-27 14:20:19 -0500
+
+
+Started GET "/auth/cas" for 127.0.0.1 at 2012-12-27 14:20:19 -0500
+
+
+Started GET "/auth/cas/callback?url=http%3A%2F%2Flocalhost%3A3000%2F&ticket=ST-15-Lf5xOO2eaPWf60IoZoMR-cas-t1" for 127.0.0.1 at 2012-12-27 14:20:19 -0500
+  Processing by UserSessionsController#new as HTML
+  Parameters: {"url"=>"http://localhost:3000/", "ticket"=>"ST-15-Lf5xOO2eaPWf60IoZoMR-cas-t1", "provider"=>"cas"}
+Rendered users/_user_bar.html.erb (1.6ms)
+Rendered users/_search_bar.html.erb (2.7ms)
+Rendered common/exception.html.erb within layouts/application (17.5ms)
+ERROR 500: #<NoMethodError: undefined method `email' for nil:NilClass>
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_request.text.erb (1.2ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (0.7ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_session.text.erb (2.5ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (0.9ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_environment.text.erb (20.8ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (1.8ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_backtrace.text.erb (1.1ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (1.5ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/exception_notification.text.erb (89.1ms)
+
+Sent mail to  (152ms)
+Completed 500 Internal Server Error in 2300ms (Views: 33.0ms | ActiveRecord: 15.4ms)
+
+
+Started GET "/courses/json" for 127.0.0.1 at 2012-12-27 14:20:23 -0500
+  Processing by CoursesController#json as JSON
+Completed 200 OK in 458ms (Views: 28.1ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/categories/json" for 127.0.0.1 at 2012-12-27 14:20:24 -0500
+  Processing by CategoriesController#json as JSON
+Completed 200 OK in 385ms (Views: 22.7ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/proglangs/json" for 127.0.0.1 at 2012-12-27 14:20:24 -0500
+  Processing by ProglangsController#json as JSON
+Completed 200 OK in 367ms (Views: 16.7ms | ActiveRecord: 2.9ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/ras/Documents/research-projects.info/berkeley-omniauth/ResearchMatch/config/environment.rb:5)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from bind at /Users/ras/Documents/research-projects.info/berkeley-omniauth/ResearchMatch/vendor/plugins/ucb_ldap/lib/ucb_ldap.rb:133)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-27 14:22:28 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (1.5ms)
+Rendered users/_search_bar.html.erb (2.6ms)
+Rendered home/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 503ms (Views: 99.9ms | ActiveRecord: 21.8ms)
+
+
+Started GET "/courses/json" for 127.0.0.1 at 2012-12-27 14:22:29 -0500
+  Processing by CoursesController#json as JSON
+Completed 200 OK in 362ms (Views: 18.4ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/proglangs/json" for 127.0.0.1 at 2012-12-27 14:22:30 -0500
+  Processing by ProglangsController#json as JSON
+Completed 200 OK in 310ms (Views: 17.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/categories/json" for 127.0.0.1 at 2012-12-27 14:22:30 -0500
+  Processing by CategoriesController#json as JSON
+Completed 200 OK in 376ms (Views: 17.7ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/auth/cas" for 127.0.0.1 at 2012-12-27 14:22:33 -0500
+
+
+Started GET "/auth/cas/callback?url=http%3A%2F%2Flocalhost%3A3000%2F&ticket=ST-16-NqmeIfq5b4DbljkE6x06-cas-t1" for 127.0.0.1 at 2012-12-27 14:22:36 -0500
+  Processing by UserSessionsController#new as HTML
+  Parameters: {"url"=>"http://localhost:3000/", "ticket"=>"ST-16-NqmeIfq5b4DbljkE6x06-cas-t1", "provider"=>"cas"}
+Rendered users/_user_bar.html.erb (1.4ms)
+Rendered users/_search_bar.html.erb (2.6ms)
+Rendered common/exception.html.erb within layouts/application (17.1ms)
+ERROR 500: #<NoMethodError: undefined method `email' for nil:NilClass>
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_request.text.erb (1.1ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (0.7ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_session.text.erb (2.0ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (0.7ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_environment.text.erb (18.0ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (2.7ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_backtrace.text.erb (1.0ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (0.9ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/exception_notification.text.erb (62.7ms)
+
+Sent mail to  (137ms)
+Completed 500 Internal Server Error in 2871ms (Views: 32.2ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/proglangs/json" for 127.0.0.1 at 2012-12-27 14:22:45 -0500
+  Processing by ProglangsController#json as JSON
+Completed 200 OK in 352ms (Views: 17.2ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/courses/json" for 127.0.0.1 at 2012-12-27 14:22:46 -0500
+  Processing by CoursesController#json as JSON
+Completed 200 OK in 366ms (Views: 18.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/categories/json" for 127.0.0.1 at 2012-12-27 14:22:46 -0500
+  Processing by CategoriesController#json as JSON
+Completed 200 OK in 391ms (Views: 16.9ms | ActiveRecord: 14.0ms)
