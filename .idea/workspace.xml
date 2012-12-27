@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bdb3ddc-7cd8-4f2f-9614-98f1fb54818d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
     </list>
     <ignored path="ResearchMatch.iws" />
@@ -30,10 +31,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ucb_ldap.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ucb_ldap.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/plugins/ucb_ldap/lib/ucb_ldap.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="41" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.33333334">
+            <state line="36" column="41" selection-start="1051" selection-end="1051" vertical-scroll-proportion="-6.923077">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application_helper.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="170" column="22" selection-start="4768" selection-end="4768" vertical-scroll-proportion="0.6311031">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="220" column="18" selection-start="7188" selection-end="7188" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -55,6 +74,7 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/ldap.yml" />
         <option value="$PROJECT_DIR$/vendor/plugins/ucb_ldap/lib/ucb_ldap.rb" />
+        <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
       </list>
     </option>
   </component>
@@ -107,7 +127,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/vendor/plugins/ucb_ldap/lib/ucb_ldap.rb" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/models/user.rb" />
     <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RunManager" selected="Rails.Development: ResearchMatch">
@@ -407,7 +427,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/plugins/ucb_ldap/lib/ucb_ldap.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="41" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.33333334">
+        <state line="36" column="41" selection-start="1051" selection-end="1051" vertical-scroll-proportion="-6.923077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="220" column="18" selection-start="7188" selection-end="7188" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="170" column="22" selection-start="4768" selection-end="4768" vertical-scroll-proportion="0.6311031">
           <folding />
         </state>
       </provider>
