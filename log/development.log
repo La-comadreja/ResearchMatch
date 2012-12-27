@@ -2437,3 +2437,117 @@ Started GET "/logout" for 127.0.0.1 at 2012-12-27 16:30:12 -0500
   Processing by UserSessionsController#destroy as HTML
 Redirected to https://auth-test.berkeley.edu/cas/logout?destination=http%3A%2F%2Flocalhost%3A3000%2F
 Completed 302 Found in 389ms
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/ras/Documents/research-projects.info/berkeley-omniauth/ResearchMatch/config/environment.rb:5)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from bind at /Users/ras/Documents/research-projects.info/berkeley-omniauth/ResearchMatch/vendor/plugins/ucb_ldap/lib/ucb_ldap.rb:132)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-27 18:16:47 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (1.8ms)
+Rendered users/_search_bar.html.erb (3.7ms)
+Rendered home/index.html.erb within layouts/application (74.8ms)
+Completed 200 OK in 779ms (Views: 98.4ms | ActiveRecord: 66.9ms)
+
+
+Started GET "/courses/json" for 127.0.0.1 at 2012-12-27 18:16:48 -0500
+  Processing by CoursesController#json as JSON
+Completed 200 OK in 551ms (Views: 44.7ms | ActiveRecord: 35.6ms)
+
+
+Started GET "/categories/json" for 127.0.0.1 at 2012-12-27 18:16:49 -0500
+  Processing by CategoriesController#json as JSON
+Completed 200 OK in 751ms (Views: 41.9ms | ActiveRecord: 28.8ms)
+
+
+Started GET "/proglangs/json" for 127.0.0.1 at 2012-12-27 18:16:50 -0500
+  Processing by ProglangsController#json as JSON
+Completed 200 OK in 751ms (Views: 31.5ms | ActiveRecord: 13.2ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/ras/Documents/research-projects.info/berkeley-omniauth/ResearchMatch/config/environment.rb:5)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from bind at /Users/ras/Documents/research-projects.info/berkeley-omniauth/ResearchMatch/vendor/plugins/ucb_ldap/lib/ucb_ldap.rb:132)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-27 18:23:28 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (2.8ms)
+Rendered users/_search_bar.html.erb (3.4ms)
+Rendered home/index.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 660ms (Views: 60.1ms | ActiveRecord: 28.6ms)
+
+
+Started GET "/courses/json" for 127.0.0.1 at 2012-12-27 18:23:30 -0500
+  Processing by CoursesController#json as JSON
+Completed 200 OK in 466ms (Views: 23.0ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/proglangs/json" for 127.0.0.1 at 2012-12-27 18:23:30 -0500
+  Processing by ProglangsController#json as JSON
+Completed 200 OK in 465ms (Views: 20.3ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/categories/json" for 127.0.0.1 at 2012-12-27 18:23:31 -0500
+  Processing by CategoriesController#json as JSON
+Completed 200 OK in 601ms (Views: 20.3ms | ActiveRecord: 19.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-12-27 18:23:32 -0500
+
+
+Started GET "/auth/cas" for 127.0.0.1 at 2012-12-27 18:23:32 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-27 18:23:47 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (1.6ms)
+Rendered users/_search_bar.html.erb (3.9ms)
+Rendered home/index.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 551ms (Views: 50.2ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/courses/json" for 127.0.0.1 at 2012-12-27 18:23:48 -0500
+  Processing by CoursesController#json as JSON
+Completed 200 OK in 584ms (Views: 27.2ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/categories/json" for 127.0.0.1 at 2012-12-27 18:23:48 -0500
+  Processing by CategoriesController#json as JSON
+Completed 200 OK in 591ms (Views: 20.3ms | ActiveRecord: 20.7ms)
+
+
+Started GET "/proglangs/json" for 127.0.0.1 at 2012-12-27 18:23:49 -0500
+  Processing by ProglangsController#json as JSON
+Completed 200 OK in 402ms (Views: 18.8ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/auth/cas" for 127.0.0.1 at 2012-12-27 18:23:53 -0500
+
+
+Started GET "/auth/cas/callback?url=http%3A%2F%2Flocalhost%3A3000%2F&ticket=ST-36-OS65AQDhGZZ0jerTnan6-cas-t2" for 127.0.0.1 at 2012-12-27 18:25:18 -0500
+  Processing by UserSessionsController#new as HTML
+  Parameters: {"url"=>"http://localhost:3000/", "ticket"=>"ST-36-OS65AQDhGZZ0jerTnan6-cas-t2", "provider"=>"cas"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 399ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-27 18:25:19 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (1.4ms)
+Rendered users/_search_bar.html.erb (2.7ms)
+Rendered home/index.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 585ms (Views: 41.8ms | ActiveRecord: 26.0ms)
+
+
+Started GET "/courses/json" for 127.0.0.1 at 2012-12-27 18:25:20 -0500
+  Processing by CoursesController#json as JSON
+Completed 200 OK in 663ms (Views: 20.9ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/categories/json" for 127.0.0.1 at 2012-12-27 18:25:21 -0500
+  Processing by CategoriesController#json as JSON
+Completed 200 OK in 536ms (Views: 23.0ms | ActiveRecord: 29.2ms)
+
+
+Started GET "/proglangs/json" for 127.0.0.1 at 2012-12-27 18:25:22 -0500
+  Processing by ProglangsController#json as JSON
+Completed 200 OK in 581ms (Views: 17.6ms | ActiveRecord: 10.0ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/ras/Documents/research-projects.info/berkeley-omniauth/ResearchMatch/config/environment.rb:5)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from bind at /Users/ras/Documents/research-projects.info/berkeley-omniauth/ResearchMatch/vendor/plugins/ucb_ldap/lib/ucb_ldap.rb:132)
