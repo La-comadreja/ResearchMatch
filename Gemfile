@@ -22,6 +22,7 @@ gem 'net-ldap', :require => 'net/ldap'
 gem 'nokogiri'
 gem 'omniauth'
 gem 'omniauth-cas'
+gem 'rake', '~> 0.8.7'
 gem 'rubycas-client', :require => ['casclient', 'casclient/frameworks/rails/filter']
 gem 'will_paginate', "~> 3.0.pre2"
 
