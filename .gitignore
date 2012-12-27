@@ -1,0 +1,16 @@
+.yardoc
+.bundle
+cscope.*
+.project
+*.swp
+**/*.pid
+config/smtp_settings.rb
+config/ldap.yml
+db/*.sqlite3
+files/
+mysql2/
+log/*.log
+tmp/
+*.project
+*~
+\#*
