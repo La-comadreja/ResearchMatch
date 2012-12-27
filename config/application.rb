@@ -39,5 +39,8 @@ module ResearchMatch
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+    # Forcing the application to not access the DB or load models when precompiling assets.  For Rails 3.1 and later.
+    # config.assets.initialize_on_precompile = false
   end
 end

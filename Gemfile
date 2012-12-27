@@ -17,6 +17,7 @@ gem 'activerecord'
 gem 'activerecord-postgresql-adapter'
 gem 'acts_as_taggable_on_steroids', :require => ['acts_as_taggable', 'tags_helper', 'tag_list', 'tagging', 'tag']
 gem 'authlogic', :git => 'git://github.com/binarylogic/authlogic.git'
+gem 'builder', '~>2.1.2'
 gem 'cancan'
 gem 'devise'
 gem 'dynamic_form'
@@ -30,6 +31,7 @@ gem 'omniauth-cas'
 gem 'rake', '~> 0.8.7'
 gem 'rubycas-client', :require => ['casclient', 'casclient/frameworks/rails/filter']
 gem 'sass'
+gem 'thor', '~> 0.14.4'
 gem 'uuidtools'
 gem 'will_paginate', "~> 3.0.pre2"
 
