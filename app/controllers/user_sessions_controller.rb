@@ -12,8 +12,6 @@ include CASControllerIncludes
     # right Users column and change auth_value to match that provider's auth
     # details. Add these on to /config/initializers/omniauth.rb.
 
-
-
     auth_config = ResearchMatch::Application.config.auth_providers[session[:auth_hash][:provider].to_sym]
     if auth_config
       auth_field = auth_config[:auth_field].to_s

@@ -143,7 +143,6 @@ module CASControllerIncludes
   # Requires a CAS session to be present, and redirects if it isn't.
   # @returns false if redirected because of new user processing, true if user was already signed up
   #
-
     # Require CAS login first
     unless @user_session
       redirect_to login_path
@@ -154,7 +153,6 @@ module CASControllerIncludes
     # so as to ensure that redirects work properly; i.e.
     # so that you are 'logged in' when you go to the Edit Profile
     # page in this next section here.
-
     unless User.exists?(auth_field => auth_value)
       new_user = User.new
       new_user[auth_field] = auth_value
