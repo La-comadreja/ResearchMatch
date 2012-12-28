@@ -29,10 +29,24 @@ ResearchMatch::Application.configure do
   )
 
   # ActionMailer
+  config.action_mailer.perform_deliveries    = true
+  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   ActionMailer::Base.raise_delivery_errors = true
   ActionMailer::Base.perform_deliveries = true
   ActionMailer::Base.delivery_method = !!(ENV['action_mailer'] =~ /1|true/i) ? :smtp : :test
   puts "INFO: ActionMailer ON" if ActionMailer::Base.delivery_method == :smtp
+
+  #Devise
+  HOST = 'localhost:3000'
+  ADMIN_EMAIL_FROM = ""
+  PONY_VIA_OPTIONS = {
+      :address => 'smtp.gmail.com',
+      :port => '587',
+      :enable_starttls_auto => true,
+      :user_name => '',
+      :password => '',
+      :authentication => :plain,
+      :domain => "localhost.localdomain" }
 end
 

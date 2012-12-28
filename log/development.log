@@ -4331,3 +4331,391 @@ DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3
 DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from bind at /Users/ras/Documents/research-projects.info/berkeley-omniauth/ResearchMatch/vendor/plugins/ucb_ldap/lib/ucb_ldap.rb:132)
 DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/ras/Documents/research-projects.info/berkeley-omniauth/ResearchMatch/config/environment.rb:5)
 DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from bind at /Users/ras/Documents/research-projects.info/berkeley-omniauth/ResearchMatch/vendor/plugins/ucb_ldap/lib/ucb_ldap.rb:132)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/ras/Documents/research-projects.info/berkeley-omniauth/ResearchMatch/config/environment.rb:5)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from bind at /Users/ras/Documents/research-projects.info/berkeley-omniauth/ResearchMatch/vendor/plugins/ucb_ldap/lib/ucb_ldap.rb:132)
+
+
+Started GET "/auth/cas" for 127.0.0.1 at 2012-12-28 13:41:08 -0500
+
+
+Started GET "/auth/cas/callback" for 127.0.0.1 at 2012-12-28 13:41:08 -0500
+  Processing by UserSessionsController#new as HTML
+  Parameters: {"provider"=>"cas"}
+Redirected to http://www.example.com/
+Completed 302 Found in 14072ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-28 13:41:22 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (1.7ms)
+Rendered users/_search_bar.html.erb (3.2ms)
+Rendered home/index.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 456ms (Views: 47.9ms | ActiveRecord: 43.7ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2012-12-28 13:41:23 -0500
+  Processing by UserSessionsController#destroy as HTML
+Redirected to https://auth-test.berkeley.edu/cas/logout?destination=http%3A%2F%2Fwww.example.com%2F
+Completed 302 Found in 386ms
+
+
+Started GET "/cas/logout?destination=http%3A%2F%2Fwww.example.com%2F" for 127.0.0.1 at 2012-12-28 13:41:23 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-28 13:41:23 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (1.7ms)
+Rendered users/_search_bar.html.erb (3.4ms)
+Rendered home/index.html.erb within layouts/application (100.3ms)
+Completed 200 OK in 521ms (Views: 114.5ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/auth/cas" for 127.0.0.1 at 2012-12-28 13:41:24 -0500
+
+
+Started GET "/auth/cas/callback" for 127.0.0.1 at 2012-12-28 13:41:24 -0500
+  Processing by UserSessionsController#new as HTML
+  Parameters: {"provider"=>"cas"}
+Redirected to http://www.example.com/
+Completed 302 Found in 2049ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-28 13:41:26 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (1.5ms)
+Rendered users/_search_bar.html.erb (76.7ms)
+Rendered home/index.html.erb within layouts/application (99.2ms)
+Completed 200 OK in 521ms (Views: 113.4ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-28 13:41:27 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (1.6ms)
+Rendered users/_search_bar.html.erb (3.3ms)
+Rendered home/index.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 448ms (Views: 39.7ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/auth/cas" for 127.0.0.1 at 2012-12-28 13:41:28 -0500
+
+
+Started GET "/auth/cas/callback" for 127.0.0.1 at 2012-12-28 13:41:28 -0500
+  Processing by UserSessionsController#new as HTML
+  Parameters: {"provider"=>"cas"}
+User.update_user_type: Couldn't determine student type for login 758752
+Rendered users/_user_bar.html.erb (1.9ms)
+Rendered users/_search_bar.html.erb (4.8ms)
+Rendered common/exception.html.erb within layouts/application (40.7ms)
+ERROR 500: #<StandardError: berkeleyEduStuUGCode not accessible. Have you authenticated with LDAP?>
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_request.text.erb (1.2ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (0.8ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_session.text.erb (2.5ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (0.9ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_environment.text.erb (32.9ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (2.7ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_backtrace.text.erb (1.5ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (1.3ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/exception_notification.text.erb (88.2ms)
+
+Sent mail to  (194ms)
+Completed 500 Internal Server Error in 2116ms (Views: 64.4ms | ActiveRecord: 31.5ms)
+
+
+Started GET "/auth/cas" for 127.0.0.1 at 2012-12-28 13:41:30 -0500
+
+
+Started GET "/auth/cas/callback" for 127.0.0.1 at 2012-12-28 13:41:30 -0500
+  Processing by UserSessionsController#new as HTML
+  Parameters: {"provider"=>"cas"}
+User.update_user_type: Couldn't determine student type for login 1005472
+Rendered users/_user_bar.html.erb (1.8ms)
+Rendered users/_search_bar.html.erb (3.5ms)
+Rendered common/exception.html.erb within layouts/application (24.1ms)
+ERROR 500: #<StandardError: berkeleyEduStuUGCode not accessible. Have you authenticated with LDAP?>
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_request.text.erb (1.1ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (0.7ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_session.text.erb (2.4ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (0.8ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_environment.text.erb (20.9ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (2.3ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_backtrace.text.erb (2.8ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (1.1ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/exception_notification.text.erb (64.3ms)
+
+Sent mail to  (19ms)
+Completed 500 Internal Server Error in 1332ms (Views: 41.8ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/auth/cas" for 127.0.0.1 at 2012-12-28 13:41:32 -0500
+
+
+Started GET "/auth/cas/callback" for 127.0.0.1 at 2012-12-28 13:41:32 -0500
+  Processing by UserSessionsController#new as HTML
+  Parameters: {"provider"=>"cas"}
+Redirected to http://www.example.com/
+Completed 302 Found in 4606ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-28 13:41:37 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (1.7ms)
+Rendered users/_search_bar.html.erb (3.4ms)
+Rendered home/index.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 400ms (Views: 43.0ms | ActiveRecord: 20.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-28 13:41:37 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (1.7ms)
+Rendered users/_search_bar.html.erb (3.3ms)
+Rendered home/index.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 396ms (Views: 41.2ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/auth/cas" for 127.0.0.1 at 2012-12-28 13:41:38 -0500
+
+
+Started GET "/auth/cas/callback" for 127.0.0.1 at 2012-12-28 13:41:38 -0500
+  Processing by UserSessionsController#new as HTML
+  Parameters: {"provider"=>"cas"}
+User.update_user_type: Couldn't determine student type for login 758752
+Rendered users/_user_bar.html.erb (1.9ms)
+Rendered users/_search_bar.html.erb (3.4ms)
+Rendered common/exception.html.erb within layouts/application (23.1ms)
+ERROR 500: #<StandardError: berkeleyEduStuUGCode not accessible. Have you authenticated with LDAP?>
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_request.text.erb (1.2ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (0.7ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_session.text.erb (2.4ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (0.8ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_environment.text.erb (22.2ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (2.0ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_backtrace.text.erb (0.9ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (0.9ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/exception_notification.text.erb (64.3ms)
+
+Sent mail to  (17ms)
+Completed 500 Internal Server Error in 6003ms (Views: 42.0ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2012-12-28 13:41:44 -0500
+  Processing by UserSessionsController#destroy as HTML
+Redirected to https://auth-test.berkeley.edu/cas/logout?destination=http%3A%2F%2Fwww.example.com%2Fauth%2Fcas%2Fcallback
+Completed 302 Found in 388ms
+
+
+Started GET "/cas/logout?destination=http%3A%2F%2Fwww.example.com%2Fauth%2Fcas%2Fcallback" for 127.0.0.1 at 2012-12-28 13:41:44 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-28 13:41:44 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (1.8ms)
+Rendered users/_search_bar.html.erb (3.8ms)
+Rendered home/index.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 417ms (Views: 43.7ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/auth/cas" for 127.0.0.1 at 2012-12-28 13:41:45 -0500
+
+
+Started GET "/auth/cas/callback" for 127.0.0.1 at 2012-12-28 13:41:45 -0500
+  Processing by UserSessionsController#new as HTML
+  Parameters: {"provider"=>"cas"}
+User.update_user_type: Couldn't determine student type for login 1005472
+Rendered users/_user_bar.html.erb (1.7ms)
+Rendered users/_search_bar.html.erb (3.3ms)
+Rendered common/exception.html.erb within layouts/application (22.4ms)
+ERROR 500: #<StandardError: berkeleyEduStuUGCode not accessible. Have you authenticated with LDAP?>
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_request.text.erb (1.1ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (0.7ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_session.text.erb (2.5ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (0.8ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_environment.text.erb (23.0ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (2.3ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_backtrace.text.erb (3.3ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (1.3ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/exception_notification.text.erb (69.2ms)
+
+Sent mail to  (17ms)
+Completed 500 Internal Server Error in 4660ms (Views: 41.3ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/auth/cas" for 127.0.0.1 at 2012-12-28 13:41:50 -0500
+
+
+Started GET "/auth/cas/callback" for 127.0.0.1 at 2012-12-28 13:41:50 -0500
+  Processing by UserSessionsController#new as HTML
+  Parameters: {"provider"=>"cas"}
+User.update_user_type: Couldn't determine student type for login 758752
+Rendered users/_user_bar.html.erb (1.7ms)
+Rendered users/_search_bar.html.erb (3.6ms)
+Rendered common/exception.html.erb within layouts/application (23.8ms)
+ERROR 500: #<StandardError: berkeleyEduStuUGCode not accessible. Have you authenticated with LDAP?>
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_request.text.erb (1.4ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (1.3ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_session.text.erb (2.7ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (1.0ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_environment.text.erb (22.9ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (2.3ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_backtrace.text.erb (1.3ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (1.2ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/exception_notification.text.erb (77.0ms)
+
+Sent mail to  (17ms)
+Completed 500 Internal Server Error in 2335ms (Views: 41.7ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-28 13:41:52 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (1.7ms)
+Rendered users/_search_bar.html.erb (3.4ms)
+Rendered home/index.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 458ms (Views: 43.8ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/auth/cas" for 127.0.0.1 at 2012-12-28 13:41:53 -0500
+
+
+Started GET "/auth/cas/callback" for 127.0.0.1 at 2012-12-28 13:41:53 -0500
+  Processing by UserSessionsController#new as HTML
+  Parameters: {"provider"=>"cas"}
+Redirected to http://www.example.com/
+Completed 302 Found in 1193ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-28 13:41:54 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (1.7ms)
+Rendered users/_search_bar.html.erb (3.4ms)
+Rendered home/index.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 415ms (Views: 41.2ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2012-12-28 13:41:55 -0500
+  Processing by JobsController#new as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 336ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-28 13:41:55 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (1.6ms)
+Rendered users/_search_bar.html.erb (3.3ms)
+Rendered home/index.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 398ms (Views: 40.3ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/auth/cas" for 127.0.0.1 at 2012-12-28 13:41:56 -0500
+
+
+Started GET "/auth/cas/callback" for 127.0.0.1 at 2012-12-28 13:41:56 -0500
+  Processing by UserSessionsController#new as HTML
+  Parameters: {"provider"=>"cas"}
+Redirected to http://www.example.com/
+Completed 302 Found in 2957ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-28 13:41:59 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (1.6ms)
+Rendered users/_search_bar.html.erb (3.3ms)
+Rendered home/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 304ms (Views: 40.8ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2012-12-28 13:41:59 -0500
+  Processing by JobsController#new as HTML
+Redirected to http://www.example.com/
+Completed 302 Found in 241ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-28 13:42:00 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (1.7ms)
+Rendered users/_search_bar.html.erb (3.3ms)
+Rendered home/index.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 305ms (Views: 40.6ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/auth/cas" for 127.0.0.1 at 2012-12-28 13:42:00 -0500
+
+
+Started GET "/auth/cas/callback" for 127.0.0.1 at 2012-12-28 13:42:00 -0500
+  Processing by UserSessionsController#new as HTML
+  Parameters: {"provider"=>"cas"}
+User.update_user_type: Couldn't determine student type for login 758752
+Rendered users/_user_bar.html.erb (1.9ms)
+Rendered users/_search_bar.html.erb (4.1ms)
+Rendered common/exception.html.erb within layouts/application (24.2ms)
+ERROR 500: #<StandardError: berkeleyEduStuUGCode not accessible. Have you authenticated with LDAP?>
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_request.text.erb (1.2ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (0.8ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_session.text.erb (2.4ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (0.7ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_environment.text.erb (23.2ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (2.0ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_backtrace.text.erb (1.0ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/_title.text.erb (0.9ms)
+Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/exception_notification-2.5.2/lib/exception_notifier/views/exception_notifier/exception_notification.text.erb (66.4ms)
+
+Sent mail to  (17ms)
+Completed 500 Internal Server Error in 3202ms (Views: 42.6ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-28 13:42:04 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (1.7ms)
+Rendered users/_search_bar.html.erb (3.4ms)
+Rendered home/index.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 462ms (Views: 43.3ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/auth/cas" for 127.0.0.1 at 2012-12-28 13:42:04 -0500
+
+
+Started GET "/auth/cas/callback" for 127.0.0.1 at 2012-12-28 13:42:04 -0500
+  Processing by UserSessionsController#new as HTML
+  Parameters: {"provider"=>"cas"}
+Redirected to http://www.example.com/
+Completed 302 Found in 1835ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-28 13:42:06 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (1.9ms)
+Rendered users/_search_bar.html.erb (3.5ms)
+Rendered home/index.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 443ms (Views: 48.3ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-28 13:42:07 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (1.7ms)
+Rendered users/_search_bar.html.erb (3.4ms)
+Rendered home/index.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 411ms (Views: 42.1ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/auth/cas" for 127.0.0.1 at 2012-12-28 13:42:07 -0500
+
+
+Started GET "/auth/cas/callback" for 127.0.0.1 at 2012-12-28 13:42:07 -0500
+  Processing by UserSessionsController#new as HTML
+  Parameters: {"provider"=>"cas"}
+Redirected to http://www.example.com/
+Completed 302 Found in 2650ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-28 13:42:10 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (1.8ms)
+Rendered users/_search_bar.html.erb (3.8ms)
+Rendered home/index.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 416ms (Views: 44.2ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-28 13:42:11 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (1.7ms)
+Rendered users/_search_bar.html.erb (3.8ms)
+Rendered home/index.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 450ms (Views: 45.9ms | ActiveRecord: 5.0ms)
