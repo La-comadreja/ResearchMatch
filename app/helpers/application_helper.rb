@@ -161,15 +161,13 @@ module CASControllerIncludes
       if session[:auth_hash][:provider].to_sym == :cas
         # When using CAS, the Users table is populated from LDAP
         person = new_user.ldap_person
-        if person != nil
-          new_user.email = person.email
-          new_user.name = new_user.ldap_person_full_name
-          new_user.update_user_type
+        if person.uid == "1001805"
+          new_user.email = "rebecca@researchmat.ch"
         else
-          new_user.email = "Rebecca's Email"
-          new_user.name = "Rebecca Sealfon"
-          new_user.user_type = User::Types::Faculty
+          new_user.email = person.email
         end
+        new_user.name = new_user.ldap_person_full_name
+        new_user.update_user_type
       end
 
       if new_user.save && new_user.errors.empty?

@@ -33,14 +33,10 @@ module ResearchMatch
     # config.action_view.javascript_expansions[:defaults] = %w(jquery jquery_ujs jquery-ui-1.8.4.custom.min autocomplete_setup)
     config.action_view.javascript_expansions[:defaults] = %w(jquery-1.8.3 jquery_ujs jquery-ui-1.9.2 autocomplete_setup)
 
-
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
-
-    # Forcing the application to not access the DB or load models when precompiling assets.  For Rails 3.1 and later.
-    # config.assets.initialize_on_precompile = false
   end
 end
