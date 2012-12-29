@@ -1,6 +1,8 @@
 ResearchMatch::Application.routes.draw do
 
 
+  resources :authentications
+
   devise_for :users
 
   get "contact_us/contact", :as => :contact_us
