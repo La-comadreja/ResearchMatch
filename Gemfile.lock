@@ -243,6 +243,7 @@ DEPENDENCIES
   haml
   heroku
   jquery-rails (>= 1.0.12)
+  linecache19
   mysql2 (< 0.3.0)
   net-ldap
   nokogiri

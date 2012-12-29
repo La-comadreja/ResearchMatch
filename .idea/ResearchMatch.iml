@@ -28,25 +28,30 @@
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v3.0.17, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="acts_as_taggable_on_steroids (v1.2, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="addressable (v2.2.6, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="archive-tar-minitar (v0.5.2, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arel (v2.0.10, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="authlogic (v3.0.3@2da24e, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="autotest-rails (v4.1.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bcrypt-ruby (v3.0.1, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v2.1.2, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.2.3, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cancan (v1.6.8, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="capistrano (v2.8.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="capybara (v1.1.1, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="childprocess (v0.2.2, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coderay (v1.0.8, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="columnize (v0.3.6, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="cucumber (v1.0.2, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="cucumber-rails (v1.0.2, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="database_cleaner (v0.6.7, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="devise (v1.5.3, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.1.2, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dynamic_form (v1.1.4, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.6.6, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="exception_notification (v2.5.2, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.0.9, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="gherkin (v2.4.18, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="haml (v3.1.7, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hashie (v1.2.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="heroku (v2.5.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="highline (v1.6.2, RVM: ruby-1.9.2-head) [gem]" level="application" />
@@ -58,6 +63,7 @@
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.2.19, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="method_source (v0.8.1, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.19, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.5.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mysql2 (v0.2.13, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="net-ldap (v0.2.2, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="net-scp (v1.0.4, RVM: ruby-1.9.2-head) [gem]" level="application" />
@@ -78,6 +84,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.5.7, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails (v3.0.17, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="railties (v3.0.17, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rake (v0.8.7, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v3.12, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rest-client (v1.6.6, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec (v2.6.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
@@ -85,6 +92,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rspec-expectations (v2.6.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-mocks (v2.6.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-rails (v2.6.1, RVM: ruby-1.9.2-head) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ruby_core_source (v0.1.5, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubycas-client (v2.2.1, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubyzip (v0.9.4, RVM: ruby-1.9.2-head) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="selenium-webdriver (v2.5.0, RVM: ruby-1.9.2-head) [gem]" level="application" />
