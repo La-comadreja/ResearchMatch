@@ -54,23 +54,23 @@ class User < ActiveRecord::Base
       All       = [Undergrad, Grad, Faculty, Admin]
   end
 
-  has_many :jobs,        :dependent => :nullify
-  has_many :reviews
-  has_one  :picture
-  has_one  :resume,      :class_name => 'Document', :conditions => {:document_type => Document::Types::Resume}, :dependent => :destroy
-  has_one  :transcript,  :class_name => 'Document', :conditions => {:document_type => Document::Types::Transcript}, :dependent => :destroy
-  has_many :reviews
-  has_many :owns
   has_many :applics
   has_many :applied_jobs,  :through => :applics, :source => :job
-  has_many :owned_jobs,    :through => :owns, :source => :job
-  has_many :watches,       :dependent => :destroy
-  has_many :enrollments,   :dependent => :destroy
-  has_many :courses,       :through => :enrollments
-  has_many :interests,     :dependent => :destroy
+  has_many :authentications
   has_many :categories,    :through => :interests
+  has_many :courses,       :through => :enrollments
+  has_many :enrollments,   :dependent => :destroy
+  has_many :interests,     :dependent => :destroy
+  has_many :jobs,        :dependent => :nullify
+  has_many :owned_jobs,    :through => :owns, :source => :job
+  has_many :owns
+  has_one  :picture
   has_many :proficiencies, :dependent => :destroy
   has_many :proglangs,     :through => :proficiencies
+  has_one  :resume,      :class_name => 'Document', :conditions => {:document_type => Document::Types::Resume}, :dependent => :destroy
+  has_many :reviews
+  has_one  :transcript,  :class_name => 'Document', :conditions => {:document_type => Document::Types::Transcript}, :dependent => :destroy
+  has_many :watches,       :dependent => :destroy
 
   # Name
   validates_presence_of     :name
