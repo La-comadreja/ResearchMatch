@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bdb3ddc-7cd8-4f2f-9614-98f1fb54818d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/authentication.rb" afterPath="$PROJECT_DIR$/app/models/authentication.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/authorization.rb" afterPath="$PROJECT_DIR$/app/models/authorization.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20121228182804_add_devise_to_users.rb" afterPath="$PROJECT_DIR$/db/migrate/20121228182804_add_devise_to_users.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20121228182848_add_name_to_users.rb" afterPath="$PROJECT_DIR$/db/migrate/20121228182848_add_name_to_users.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
     </list>
     <ignored path="ResearchMatch.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,7 +35,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="200" column="3" selection-start="9445" selection-end="9445" vertical-scroll-proportion="0.0">
               <folding>
-                <marker date="1356728771000" expanded="true" signature="460:744" placeholder="#..." />
                 <marker date="1356728771000" expanded="true" signature="785:2094" placeholder="#..." />
                 <marker date="1356728771000" expanded="true" signature="2142:2376" placeholder="#..." />
                 <marker date="1356728771000" expanded="true" signature="2424:3561" placeholder="#..." />
@@ -57,19 +46,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gemfile">
+      <file leaf-file-name="user.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="1" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0">
+            <state line="40" column="9" selection-start="1534" selection-end="1534" vertical-scroll-proportion="0.85895115">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20121228182848_add_name_to_users.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20121228182848_add_name_to_users.rb">
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="6" selection-start="67" selection-end="67" vertical-scroll-proportion="0.05514706">
+            <state line="25" column="1" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -126,11 +115,11 @@
         <option value="$PROJECT_DIR$/app/models/authorization.rb" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/config/initializers/devise.rb" />
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/models/authentication.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/db/migrate/20121228182804_add_devise_to_users.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20121228182848_add_name_to_users.rb" />
+        <option value="$PROJECT_DIR$/app/models/user.rb" />
       </list>
     </option>
   </component>
@@ -592,21 +581,6 @@
         <state line="20" column="16" selection-start="884" selection-end="884" vertical-scroll-proportion="0.5300353" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="200" column="3" selection-start="9445" selection-end="9445" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1356728771000" expanded="true" signature="460:744" placeholder="#..." />
-            <marker date="1356728771000" expanded="true" signature="785:2094" placeholder="#..." />
-            <marker date="1356728771000" expanded="true" signature="2142:2376" placeholder="#..." />
-            <marker date="1356728771000" expanded="true" signature="2424:3561" placeholder="#..." />
-            <marker date="1356728771000" expanded="true" signature="3611:4901" placeholder="#..." />
-            <marker date="1356728771000" expanded="true" signature="4948:7066" placeholder="#..." />
-            <marker date="1356728771000" expanded="true" signature="7111:9198" placeholder="#..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
@@ -677,16 +651,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20121228182848_add_name_to_users.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="36" selection-start="2694" selection-end="2694" vertical-scroll-proportion="2.071563">
+        <state line="2" column="6" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20121228182848_add_name_to_users.rb">
+    <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="6" selection-start="67" selection-end="67" vertical-scroll-proportion="0.05514706">
+        <state line="200" column="3" selection-start="9445" selection-end="9445" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1356728771000" expanded="true" signature="785:2094" placeholder="#..." />
+            <marker date="1356728771000" expanded="true" signature="2142:2376" placeholder="#..." />
+            <marker date="1356728771000" expanded="true" signature="2424:3561" placeholder="#..." />
+            <marker date="1356728771000" expanded="true" signature="3611:4901" placeholder="#..." />
+            <marker date="1356728771000" expanded="true" signature="4948:7066" placeholder="#..." />
+            <marker date="1356728771000" expanded="true" signature="7111:9198" placeholder="#..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="9" selection-start="1534" selection-end="1534" vertical-scroll-proportion="0.85895115">
           <folding />
         </state>
       </provider>
