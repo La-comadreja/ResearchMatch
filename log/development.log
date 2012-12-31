@@ -5276,3 +5276,158 @@ ActionView::Template::Error (undefined method `user_omniauth_authorize_path' for
 Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.0.17/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
 Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.0.17/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (14.3ms)
 Rendered /Users/ras/.rvm/gems/ruby-1.9.3-p327@global/gems/actionpack-3.0.17/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (201.7ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /Users/ras/Documents/research-projects.info/berkeley-omniauth/ResearchMatch/config/environment.rb:5)
+DEPRECATION WARNING: RAILS_ENV is deprecated. Please use ::Rails.env. (called from bind at /Users/ras/Documents/research-projects.info/berkeley-omniauth/ResearchMatch/vendor/plugins/ucb_ldap/lib/ucb_ldap.rb:132)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-31 11:56:01 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (1.7ms)
+Rendered users/_search_bar.html.erb (2.9ms)
+Rendered home/index.html.erb within layouts/application (51.5ms)
+Completed 200 OK in 105ms (Views: 57.9ms | ActiveRecord: 19.1ms)
+
+
+Started GET "/courses/json" for 127.0.0.1 at 2012-12-31 11:56:03 -0500
+  Processing by CoursesController#json as JSON
+Completed 200 OK in 423ms (Views: 19.2ms | ActiveRecord: 36.0ms)
+
+
+Started GET "/proglangs/json" for 127.0.0.1 at 2012-12-31 11:56:03 -0500
+  Processing by ProglangsController#json as JSON
+Completed 200 OK in 472ms (Views: 17.2ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/categories/json" for 127.0.0.1 at 2012-12-31 11:56:04 -0500
+  Processing by CategoriesController#json as JSON
+Completed 200 OK in 418ms (Views: 17.5ms | ActiveRecord: 17.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-12-31 11:56:08 -0500
+
+
+Started GET "/auth/cas" for 127.0.0.1 at 2012-12-31 11:56:08 -0500
+
+
+Started GET "/auth/cas" for 127.0.0.1 at 2012-12-31 11:56:23 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-31 11:59:13 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (1.7ms)
+Rendered users/_search_bar.html.erb (2.9ms)
+Rendered home/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 483ms (Views: 37.9ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/categories/json" for 127.0.0.1 at 2012-12-31 11:59:14 -0500
+  Processing by CategoriesController#json as JSON
+Completed 200 OK in 393ms (Views: 16.9ms | ActiveRecord: 20.4ms)
+
+
+Started GET "/courses/json" for 127.0.0.1 at 2012-12-31 11:59:15 -0500
+  Processing by CoursesController#json as JSON
+Completed 200 OK in 465ms (Views: 18.1ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/proglangs/json" for 127.0.0.1 at 2012-12-31 11:59:15 -0500
+  Processing by ProglangsController#json as JSON
+Completed 200 OK in 403ms (Views: 17.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-31 11:59:55 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (2.1ms)
+Rendered users/_search_bar.html.erb (2.9ms)
+Rendered home/index.html.erb within layouts/application (91.0ms)
+Completed 200 OK in 476ms (Views: 105.0ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/proglangs/json" for 127.0.0.1 at 2012-12-31 11:59:56 -0500
+  Processing by ProglangsController#json as JSON
+Completed 200 OK in 375ms (Views: 17.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/courses/json" for 127.0.0.1 at 2012-12-31 11:59:57 -0500
+  Processing by CoursesController#json as JSON
+Completed 200 OK in 466ms (Views: 18.3ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/categories/json" for 127.0.0.1 at 2012-12-31 11:59:57 -0500
+  Processing by CategoriesController#json as JSON
+Completed 200 OK in 391ms (Views: 16.9ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-31 12:00:31 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (1.7ms)
+Rendered users/_search_bar.html.erb (71.2ms)
+Rendered home/index.html.erb within layouts/application (91.3ms)
+Completed 200 OK in 477ms (Views: 105.3ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/courses/json" for 127.0.0.1 at 2012-12-31 12:00:32 -0500
+  Processing by CoursesController#json as JSON
+Completed 200 OK in 403ms (Views: 18.3ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/proglangs/json" for 127.0.0.1 at 2012-12-31 12:00:32 -0500
+  Processing by ProglangsController#json as JSON
+Completed 200 OK in 383ms (Views: 16.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/categories/json" for 127.0.0.1 at 2012-12-31 12:00:33 -0500
+  Processing by CategoriesController#json as JSON
+Completed 200 OK in 393ms (Views: 17.1ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-31 12:01:01 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (1.7ms)
+Rendered users/_search_bar.html.erb (3.1ms)
+Rendered home/index.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 429ms (Views: 38.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/proglangs/json" for 127.0.0.1 at 2012-12-31 12:01:02 -0500
+  Processing by ProglangsController#json as JSON
+Completed 200 OK in 388ms (Views: 17.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/courses/json" for 127.0.0.1 at 2012-12-31 12:01:02 -0500
+  Processing by CoursesController#json as JSON
+Completed 200 OK in 413ms (Views: 19.9ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/categories/json" for 127.0.0.1 at 2012-12-31 12:01:03 -0500
+  Processing by CategoriesController#json as JSON
+Completed 200 OK in 435ms (Views: 18.0ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-31 12:01:23 -0500
+  Processing by HomeController#index as HTML
+Rendered users/_user_bar.html.erb (1.9ms)
+Rendered users/_search_bar.html.erb (3.2ms)
+Rendered home/index.html.erb within layouts/application (36.3ms)
+Completed 200 OK in 543ms (Views: 65.0ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/courses/json" for 127.0.0.1 at 2012-12-31 12:01:24 -0500
+  Processing by CoursesController#json as JSON
+Completed 200 OK in 406ms (Views: 18.9ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/proglangs/json" for 127.0.0.1 at 2012-12-31 12:01:25 -0500
+  Processing by ProglangsController#json as JSON
+Completed 200 OK in 411ms (Views: 17.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/categories/json" for 127.0.0.1 at 2012-12-31 12:01:25 -0500
+  Processing by CategoriesController#json as JSON
+Completed 200 OK in 396ms (Views: 17.0ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/auth/cas" for 127.0.0.1 at 2012-12-31 12:01:31 -0500
+
+
+Started GET "/auth/cas" for 127.0.0.1 at 2012-12-31 12:01:37 -0500

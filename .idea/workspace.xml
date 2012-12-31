@@ -3,20 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3bdb3ddc-7cd8-4f2f-9614-98f1fb54818d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-<<<<<<< HEAD
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/_user_bar.html.erb" afterPath="$PROJECT_DIR$/app/views/users/_user_bar.html.erb" />
-=======
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/authentication.rb" afterPath="$PROJECT_DIR$/app/models/authentication.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/authorization.rb" afterPath="$PROJECT_DIR$/app/models/authorization.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20121228182804_add_devise_to_users.rb" afterPath="$PROJECT_DIR$/db/migrate/20121228182804_add_devise_to_users.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20121228182848_add_name_to_users.rb" afterPath="$PROJECT_DIR$/db/migrate/20121228182848_add_name_to_users.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
->>>>>>> parent of 5ecbe8a... Devise omniauthable and features alphabetized
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/_user_bar.html.erb" afterPath="$PROJECT_DIR$/app/views/users/_user_bar.html.erb" />
     </list>
     <ignored path="ResearchMatch.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,34 +23,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_user_bar.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_user_bar.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/users/_user_bar.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="57" selection-start="301" selection-end="301" vertical-scroll-proportion="-3.125">
+            <state line="8" column="8" selection-start="438" selection-end="438" vertical-scroll-proportion="0.2268431">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Gemfile">
+      <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="14" selection-start="684" selection-end="684" vertical-scroll-proportion="0.4148148">
-=======
-      <file leaf-file-name="devise.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="200" column="3" selection-start="9445" selection-end="9445" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1356728771000" expanded="true" signature="460:744" placeholder="#..." />
-                <marker date="1356728771000" expanded="true" signature="785:2094" placeholder="#..." />
-                <marker date="1356728771000" expanded="true" signature="2142:2376" placeholder="#..." />
-                <marker date="1356728771000" expanded="true" signature="2424:3561" placeholder="#..." />
-                <marker date="1356728771000" expanded="true" signature="3611:4901" placeholder="#..." />
-                <marker date="1356728771000" expanded="true" signature="4948:7066" placeholder="#..." />
-                <marker date="1356728771000" expanded="true" signature="7111:9198" placeholder="#..." />
-              </folding>
+            <state line="132" column="5" selection-start="4946" selection-end="4946" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -70,26 +44,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="1" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20121228182848_add_name_to_users.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20121228182848_add_name_to_users.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="6" selection-start="67" selection-end="67" vertical-scroll-proportion="0.05514706">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
->>>>>>> parent of 5ecbe8a... Devise omniauthable and features alphabetized
+            <state line="26" column="14" selection-start="684" selection-end="684" vertical-scroll-proportion="-8.615385">
               <folding />
             </state>
           </provider>
@@ -127,16 +82,12 @@
         <option value="$PROJECT_DIR$/app/models/authorization.rb" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/config/initializers/devise.rb" />
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/models/authentication.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20121228182804_add_devise_to_users.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20121228182848_add_name_to_users.rb" />
-<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/views/users/_user_bar.html.erb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
-=======
->>>>>>> parent of 5ecbe8a... Devise omniauthable and features alphabetized
       </list>
     </option>
   </component>
@@ -321,7 +272,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/views/users/_user_bar.html.erb" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/models/user.rb" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="dynamic.classpath" value="false" />
   </component>
@@ -593,26 +544,7 @@
         <state line="20" column="16" selection-start="884" selection-end="884" vertical-scroll-proportion="0.5300353" />
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/models/user_session.rb">
-=======
-    <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="200" column="3" selection-start="9445" selection-end="9445" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1356728771000" expanded="true" signature="460:744" placeholder="#..." />
-            <marker date="1356728771000" expanded="true" signature="785:2094" placeholder="#..." />
-            <marker date="1356728771000" expanded="true" signature="2142:2376" placeholder="#..." />
-            <marker date="1356728771000" expanded="true" signature="2424:3561" placeholder="#..." />
-            <marker date="1356728771000" expanded="true" signature="3611:4901" placeholder="#..." />
-            <marker date="1356728771000" expanded="true" signature="4948:7066" placeholder="#..." />
-            <marker date="1356728771000" expanded="true" signature="7111:9198" placeholder="#..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
->>>>>>> parent of 5ecbe8a... Devise omniauthable and features alphabetized
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
@@ -642,13 +574,6 @@
         <state line="2" column="6" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="27" selection-start="4852" selection-end="4852" vertical-scroll-proportion="0.41619587">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="200" column="3" selection-start="9445" selection-end="9445" vertical-scroll-proportion="0.5762712">
@@ -663,13 +588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/_user_bar.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="57" selection-start="301" selection-end="301" vertical-scroll-proportion="-3.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="44" selection-end="44" vertical-scroll-proportion="0.026501767">
@@ -677,20 +595,13 @@
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="2" selection-start="257" selection-end="257" vertical-scroll-proportion="0.16274865">
-=======
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="36" selection-start="2694" selection-end="2694" vertical-scroll-proportion="2.071563">
->>>>>>> parent of 5ecbe8a... Devise omniauthable and features alphabetized
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/config/initializers/omniauth.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="4" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0">
@@ -700,12 +611,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="14" selection-start="684" selection-end="684" vertical-scroll-proportion="0.4148148">
-=======
-    <entry file="file://$PROJECT_DIR$/db/migrate/20121228182848_add_name_to_users.rb">
+        <state line="26" column="14" selection-start="684" selection-end="684" vertical-scroll-proportion="-8.615385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="6" selection-start="67" selection-end="67" vertical-scroll-proportion="0.05514706">
->>>>>>> parent of 5ecbe8a... Devise omniauthable and features alphabetized
+        <state line="132" column="5" selection-start="4946" selection-end="4946" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/_user_bar.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="8" selection-start="438" selection-end="438" vertical-scroll-proportion="0.2268431">
           <folding />
         </state>
       </provider>
