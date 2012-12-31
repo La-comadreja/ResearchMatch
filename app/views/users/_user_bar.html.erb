@@ -2,6 +2,8 @@
   <% if @current_user %>
     Logged in as <%= @current_user.name %>. <%= link_to 'Log Out', logout_path %>
   <% else %>
-    <%= link_to 'Log In', login_path, :class => 'user-bar-action' %><%= ' via CalNet' unless session[:user_id].present? %> to access our listings.
+    Log In via <%= link_to 'UC Berkeley CalNet', login_path, :class => 'user-bar-action' %> or
+      <%= link_to 'OpenID', user_omniauth_authorize_path(:open_id, :openid_url => "https://www.google.com/accounts/o8/id") unless session[:user_id].present? %>
+      to access our listings.
   <% end %>
 </div>
