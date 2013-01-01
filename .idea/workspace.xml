@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bdb3ddc-7cd8-4f2f-9614-98f1fb54818d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/_user_bar.html.erb" afterPath="$PROJECT_DIR$/app/views/users/_user_bar.html.erb" />
     </list>
     <ignored path="ResearchMatch.iws" />
@@ -26,7 +24,7 @@
       <file leaf-file-name="_user_bar.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/users/_user_bar.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="8" selection-start="438" selection-end="438" vertical-scroll-proportion="0.2268431">
+            <state line="6" column="8" selection-start="316" selection-end="316" vertical-scroll-proportion="0.17013232">
               <folding />
             </state>
           </provider>
@@ -625,7 +623,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/_user_bar.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="8" selection-start="438" selection-end="438" vertical-scroll-proportion="0.2268431">
+        <state line="6" column="8" selection-start="316" selection-end="316" vertical-scroll-proportion="0.17013232">
           <folding />
         </state>
       </provider>
