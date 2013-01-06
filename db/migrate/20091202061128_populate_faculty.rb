@@ -139,6 +139,7 @@ class PopulateFaculty < ActiveRecord::Migration
 =end
     Faculty.create :name => 'Professor Amber Feng', :email => 'amber.feng@gmail.com', :department => 'EECS'
     Faculty.create :name => 'Professor Amber Feng 2', :email => 'kraziixsh0rtie@gmail.com', :department => 'EECS'
+    Faculty.create :name => 'Rebecca Sealfon', :email => 'ras2198@columbia.edu', :department => 'EECS'
   end
 
   def self.down
