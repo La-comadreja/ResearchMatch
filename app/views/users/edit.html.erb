@@ -2,19 +2,19 @@
 
 <h1>User Profile</h1>
 
-<%= form_for @user do |f| %>
-  <% if @user.errors.any? %>
+<%= form_for current_user do |f| %>
+  <% if current_user.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <h2><%= pluralize(current_user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
       <ul>
-      <% @user.errors.full_messages.each do |msg| %>
+      <% current_user.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
     </div>
     <br />
-  <% end if @user != nil %>
+  <% end if current_user != nil %>
 <%# end %>
 
 <!-- Basic info: i.e., email address -->
@@ -24,10 +24,10 @@
       <div class="dashboard_container_medium box_shadow" style="float:left">
         <h2>The Basics</h2>
         <div class="left_col">
-          <p>Name: <b><%= @user.name %></b></p>
+          <p>Name: <b><%= current_user.name %></b></p>
           <br />
           <p><%= label_tag 'email', 'E-mail address' %>:<br />
-              <%= @user.email %>
+              <%= current_user.email %>
           </p>
         </div> <%# Left col %>
          <!--<div class="right_col">
@@ -54,7 +54,7 @@
 
 <br />
 
-<% if ! @user.is_faculty %>
+<%# if ! @user.is_faculty %>
 <!-- courses / interests / proglangs. part of the user form. -->
 <div class="dashboard_container">
   <div class="dashboard_wrapper_medium">
@@ -82,13 +82,13 @@
   </div>
 </div>
 <%# end courses / interests / proglangs -%>
-<% end %>
+<%# end %>
 
 <br />
 <br />
 
 <%# TODO CSS this up %>
-<%- unless @current_user.is_faculty? -%>
+<%-# unless @current_user.is_faculty? -%>
 <div class="dashboard_container"><div class="wrapper_medium"><div class="dashboard_container_medium box_shadow">
   <h2>At a Glance</h2>
 
@@ -99,7 +99,7 @@
 
   <p>
   I'm a
-  <%= f.select :year, options_for_select( (1..4).collect{|y| [y.ordinalize, y] }, @current_user.year) %> year student, and taking
+  <%= f.select :year, options_for_select( (1..4).collect{|y| [y.ordinalize, y] }, current_user.year) %> year student, and taking
   <%= f.text_field :units, :style => 'width: 36px; text-align:center;', :placeholder => '0' %>
   units this semester.
   </p>
@@ -134,9 +134,9 @@
 
 </div>
 <br/>
-<%- end -%>
+<%-# end -%>
 
-<% unless @user.is_faculty? %>
+<%# unless @user.is_faculty? %>
 <div class="dashboard_container"><div class="dashboard_wrapper_medium"><div class="dashboard_container_medium box_shadow">
   <h2>Attachments</h2>
 
@@ -167,7 +167,7 @@
 
 <br/>
 </div></div>
-<% end %>
+<%# end %>
 
 <% end # form_for %>
 
