@@ -281,7 +281,7 @@ class JobsController < ApplicationController
 
   def watch	
 	  job = Job.find(params[:id])
-  	watch = Watch.new({:user=> @current_user, :job => job})
+  	watch = Watch.new({:user => current_user, :job => job})
 	
   	respond_to do |format|
   		if watch.save
