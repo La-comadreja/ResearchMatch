@@ -15,7 +15,7 @@
 <p>
   posted by <b><%= @job.user.nil? ? 'anonymous' : link_to(@job.user.name, :controller => :users, :action => :show, :id => @job.user_id)%></b> &nbsp; 	
 	<b>
-	<% if @current_user.present? && @job.user_id == @current_user.id %>
+	<% if current_user.present? && @job.user_id == current_user.id %>
     <% if ! @job.active %>
       <a href="#" onclick="if(confirm('Are you sure you want to resend the ' +
       'confirmation email? This will contact the faculty sponsors for this listing ' +
@@ -28,16 +28,16 @@
 		<%= link_to "[delete]", :controller=> "jobs", :action => "delete", :id => @job.id %>
 	<% end %>&nbsp;
 	
-	<% if @current_user != nil && !@current_user.is_faculty %>
-		<% if @job.users.include?(@current_user) %>
+	<% if current_user != nil && !current_user.is_faculty %>
+		<% if @job.users.include?(current_user) %>
 			<%= link_to "[unwatch this job]", :controller => :jobs, :action => :unwatch, :id => @job.id %>
-		<% elsif @job.user != @current_user %>
+		<% elsif @job.user != current_user %>
 			<%= link_to "[watch this job]", :controller => :jobs, :action => :watch, :id => @job.id %>
 		<% end %>
         &nbsp;
-    <% if @job.applicants.include?(@current_user) %>
+    <% if @job.applicants.include?(current_user) %>
 			[applied!]
-		<% elsif @job.user != @current_user %>
+		<% elsif @job.user != current_user %>
 			<%= link_to "[apply for this job]", new_job_applic_path(@job.id) %>
 		<% end %>
 	<% end %>
@@ -195,7 +195,7 @@
 	    <% @job.users.each do |usr| %>
 		    <li>
     		    <%= link_to usr.name, :controller => :users, :action => :show, :id => usr.id %>
-    		    <%= !@current_user.nil? && usr.name == @current_user.name ? " (you)" : "" %>
+    		    <%= !current_user.nil? && usr.name == current_user.name ? " (you)" : "" %>
     		</li>    
 	    <% end %>
         </ul>
@@ -204,9 +204,7 @@
 </p>
 <br />
 
-
-
-<% if @current_user.present? && @current_user.can_post? %>
+<% if current_user.present? && current_user.can_post? %>
 
   <br />
   <h2>Applications</h2>
@@ -214,7 +212,7 @@
       <% if @job.applics.empty? -%>
       None yet.
       <% else -%>
-          <% if @job.allow_admin_by? @current_user -%>
+          <% if @job.allow_admin_by? current_user -%>
             <ul>
             <% @job.applics.each do |a| -%>
                 <li><%= link_to a.user.name, :controller => :applics, :action => :show, :id => a.id %></li>
