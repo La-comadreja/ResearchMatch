@@ -38,7 +38,6 @@
     <% if @job.applicants.include?(current_user) %>
 			[applied!]
 		<% elsif @job.user != current_user %>
-            <% binding.pry %>
 			<%= link_to "[apply for this job]", create_job_applic_path(@job.id) %>
 		<% end %>
 	<% end %>
