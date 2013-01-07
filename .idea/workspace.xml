@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="634db484-1f3d-4c8a-9f8c-8fb000277c90" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/jobs_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/jobs_controller.rb" />
     </list>
     <ignored path="ResearchMatch.iws" />
@@ -38,7 +37,7 @@
       <file leaf-file-name="jobs_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/jobs_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="289" column="19" selection-start="9372" selection-end="9372" vertical-scroll-proportion="0.46336633">
+            <state line="304" column="4" selection-start="9861" selection-end="9861" vertical-scroll-proportion="0.65346533">
               <folding />
             </state>
           </provider>
@@ -526,7 +525,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/jobs_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="289" column="19" selection-start="9372" selection-end="9372" vertical-scroll-proportion="0.46336633">
+        <state line="304" column="4" selection-start="9861" selection-end="9861" vertical-scroll-proportion="0.65346533">
           <folding />
         </state>
       </provider>

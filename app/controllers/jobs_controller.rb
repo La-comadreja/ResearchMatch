@@ -296,7 +296,7 @@ class JobsController < ApplicationController
   
  def unwatch	
    job = Job.find(params[:id])
-   watch = Watch.find(:first, :conditions=>{:user_id=> @current_user.id, :job_id => job.id})
+   watch = Watch.find(:first, :conditions=>{:user_id=> current_user.id, :job_id => job.id})
 
    respond_to do |format|
   	 if watch.destroy
@@ -307,7 +307,6 @@ class JobsController < ApplicationController
   	   format.html { redirect_to(job) }
   	 end
    end
-	
   end
   
   
@@ -356,6 +355,4 @@ class JobsController < ApplicationController
 	        redirect_to :controller => 'dashboard', :action => :index
 	    end
 	end
-
-
 end
