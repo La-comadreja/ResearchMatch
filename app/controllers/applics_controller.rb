@@ -3,7 +3,7 @@ class ApplicsController < ApplicationController
   before_filter :rm_login_required
   before_filter :find_objects
 
-  # These filters verify that @current_user has the right permissions
+  # These filters verify that current_user has the right permissions
   before_filter :verify_applic_ownership, :only => [:destroy]
     # only applicant can withdraw
   before_filter :verify_applic_admin,     :only => [:show, :resume, :transcript]
@@ -27,7 +27,7 @@ class ApplicsController < ApplicationController
 
   def verify_job_unapplied
     if existing = Applic.find(:first, :conditions =>
-      {:user_id => @current_user.id, :job_id => @job.id})
+      {:user_id => current_user.id, :job_id => @job.id})
        flash[:error] = "Whoa, slow down! You've already applied for this job. "
        flash[:error] << "If you'd like to update your application, please "
        flash[:error] << "withdraw your existing one, shown here."
@@ -40,7 +40,7 @@ class ApplicsController < ApplicationController
     a = @applic #Applic.find(params[:id])
     return if redirected_because(a.nil?, "Couldn't find that application.",
       jobs_path)
-    return if redirected_because(a.user != @current_user,
+    return if redirected_because(a.user != current_user,
       "Only the original applicant can withdraw an application.",
       job_path(a.job))
   end
@@ -49,15 +49,15 @@ class ApplicsController < ApplicationController
     a = @applic #Applic.find(params[:id])
     return if redirected_because(a.nil?, "Couldn't find that application.",
       jobs_path)
-    return if redirected_because( (a.user != @current_user) &&
-      !a.job.allow_admin_by?(@current_user),
+    return if redirected_because( (a.user != current_user) &&
+      !a.job.allow_admin_by?(current_user),
       "You are not authorized to view that application.", job_path(a.job))
   end
 
   def verify_job_ownership
     j = @job #Job.find(params[:job_id])
     return if redirected_because(j.nil?, "Couldn't find that job.", jobs_path)
-    return if redirected_because(! j.allow_admin_by?(@current_user),
+    return if redirected_because(! j.allow_admin_by?(current_user),
       "You are not authorized to view the applications for this job.",
       job_path(j))
   end
@@ -102,12 +102,12 @@ class ApplicsController < ApplicationController
 
   # the action for actually applying.
   def create
-    @applic = Applic.new({:user_id => @current_user.id,
+    @applic = Applic.new({:user_id => current_user.id,
       :job_id => @job.id}.update(params[:applic]))
-    @applic.resume_id = @current_user.resume.id if params[:include_resume] &&
-      @current_user.resume.present?
-    @applic.transcript_id = @current_user.transcript.id if
-      params[:include_transcript] && @current_user.transcript.present?
+    @applic.resume_id = current_user.resume.id if params[:include_resume] &&
+      current_user.resume.present?
+    @applic.transcript_id = current_user.transcript.id if
+      params[:include_transcript] && current_user.transcript.present?
 
     respond_to do |format|
         if @applic.save
@@ -125,7 +125,7 @@ class ApplicsController < ApplicationController
   # withdraw from an application (destroy the applic)
   def destroy
     applic = Applic.find(:job_id=>params[:id])
-    if !applic.nil? && applic.user == @current_user
+    if !applic.nil? && applic.user == current_user
         respond_to do |format|
             if applic.destroy
                 flash[:error] = "Withdrew your application successfully. "
@@ -148,5 +148,4 @@ class ApplicsController < ApplicationController
     flash[:notice] = "Application listing not implemented yet."
     redirect_to job_path(@job)
   end
- 
 end
