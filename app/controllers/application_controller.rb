@@ -28,17 +28,6 @@ class ApplicationController < ActionController::Base
     raise if Rails.test?
   end
 
-  #def current_user
-  #  # TODO: transition this out in favor of @current_user
-  #  ActiveSupport::Deprecation.warn "current_user is deprecated in favor of @current_user", caller
-  #  @current_user
-  #end
-
-  # Puts a flash[:notice] error message and redirects if condition isn't true.
-  # Returns true if redirected.
-  #
-  # Usage: return if redirected_because(!user_logged_in, "Not logged in!", "/diaf")
-  #
   def redirected_because(condition=true, error_msg="Error!", redirect_url=nil)
     return false if condition == false or redirect_url.nil?
     flash[:error] = error_msg
@@ -58,7 +47,7 @@ class ApplicationController < ActionController::Base
     j = (Job.find(params[:id].present? ? params[:id] : params[:job_id]) rescue nil)
       # id and job_id because this filter is used by both the JobsController
       # and the ApplicsController
-    if (j == nil || ! j.active && @current_user != j.user)
+    if (j == nil || ! j.active && current_user != j.user)
       flash[:error] = "Unauthorized access denied. Do not pass Go. Do not collect $200."
       redirect_to :controller => 'dashboard', :action => :index
     end
@@ -70,7 +59,7 @@ class ApplicationController < ActionController::Base
     j = Job.find(params[:id].present? ? params[:id] : params[:job_id])
       # id and job_id because this filter is used by both the JobsController
       # and the ApplicsController
-    if (j == nil || @current_user == j.user)
+    if (j == nil || current_user == j.user)
       flash[:error] = "You cannot watch or apply to your own listing."
       redirect_to job_path(j)
     end
@@ -89,8 +78,5 @@ class ApplicationController < ActionController::Base
   end
 
   def set_current_user
-#@user_session = UserSession.find
-#@current_user = @user_session ? @user_session.user : nil
   end
-
 end
