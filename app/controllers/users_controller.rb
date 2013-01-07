@@ -7,11 +7,6 @@ class UsersController < ApplicationController
   auto_complete_for :course, :name
   auto_complete_for :category, :name
   auto_complete_for :proglang, :name
-    
-  #CalNet / CAS Authentication
-  # before_filter CASClient::Frameworks::Rails::Filter
-  # before_filter :rm_login_required, :except => [:new, :create]
-  # before_filter :setup_cas_user, :except => [:new, :create]
    
   # Ensures that only this user -- and no other users -- can edit his/her profile
   before_filter :correct_user_access, :only => [ :edit, :update, :destroy ]
@@ -19,34 +14,6 @@ class UsersController < ApplicationController
   def show 
     redirect_to :controller => :dashboard, :action => :index unless params[:id].to_s == @current_user.id.to_s
   end
-  
-  # Don't render new.rhtml; instead, create the user immediately 
-  # and redirect to the edit profile page.
-  #def new
-  #    # Make sure user isn't already signed up
-  #    if User.exists?(:login => session[:cas_user]) then
-  #      flash[:warning] = "You're already signed up."
-  #      redirect_to dashboard_path
-  #      return
-  #    end
-  #
-  #    #@user = User.new(:login => session[:cas_user].to_s)
-  #    person = @user.ldap_person
-  #
-  #    if person.nil?
-  #      # TODO: what to do here?
-  #      logger.warn "UsersController.new: Failed to find LDAP::Person for uid #{session[:cas_user]}"
-  #      flash[:error] = "A directory error occurred. Please make sure you've authenticated with CalNet and try again."
-  #      redirect_to '/'
-  #    end
-  #
-  #    @user.name  = person.full_name
-  #    @user.email = person.email
-  #    @user.update_user_type
-  #
-  #    # create
-  #    create
-  #end
 
   def create
     # logout_keeping_session!
@@ -57,14 +24,6 @@ class UsersController < ApplicationController
       flash[:error] = "You've already signed up." 
       redirect_to '/'
     end
-
-    # @user = User.new(params[:user])
-    # @user.login = session[:cas_user]
-    # @user.name = @user.ldap_person_full_name
-
-    # For some reason, the email doesn't persist when coming from 
-    # the new action. This band-aid works.
-    # @user.email ||= @user.ldap_person.email
 
     @user.update_user_type
     if @user.save && @user.errors.empty? then 
