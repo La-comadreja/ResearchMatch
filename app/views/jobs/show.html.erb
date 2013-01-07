@@ -27,7 +27,7 @@
 		<%= link_to "[edit]", :controller => :jobs, :action => :edit, :id => @job.id %> 
 		<%= link_to "[delete]", :controller=> "jobs", :action => "delete", :id => @job.id %>
 	<% end %>&nbsp;
-	
+
 	<% if current_user != nil && !current_user.is_faculty %>
 		<% if @job.users.include?(current_user) %>
 			<%= link_to "[unwatch this job]", :controller => :jobs, :action => :unwatch, :id => @job.id %>
