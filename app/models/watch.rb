@@ -19,5 +19,4 @@ class Watch < ActiveRecord::Base
     self.updated_at = Time.now
     self.save
   end
-  
 end

@@ -1,7 +1,6 @@
 class ApplicsController < ApplicationController
   include CASControllerIncludes
   before_filter :rm_login_required
-
   before_filter :find_objects
 
   # These filters verify that @current_user has the right permissions
@@ -91,16 +90,14 @@ class ApplicsController < ApplicationController
   end
 
   def new
-    #@job = Job.find(params[:job_id])
-    
     if Applic.find(:first, :conditions =>
-        {:user_id => @current_user.id, :job_id => @job.id})
+        {:user_id => current_user.id, :job_id => @job.id})
        flash[:error] = "Whoa, slow down! You've already applied for this job."
        redirect_to(url_for(@job))
        return
     end
     
-    @applic = Applic.new({:user => @current_user, :job => @job})
+    @applic = Applic.new({:user => current_user, :job => @job})
   end
 
   # the action for actually applying.

@@ -18,14 +18,12 @@
 						  <%= link_to "[watch]", :controller=>:jobs, :action => :watch, :id => job.id %>
 					  <% end %>
 					  
-            <% if job.applicants.include?(@current_user) %>
+            <% if job.applicants.include?(current_user) %>
                 [applied!]
-            <% elsif job.user != @current_user %>
+            <% elsif job.user != current_user %>
                 <%= link_to "[apply for this job]", new_job_applic_path(job.id) %>
             <% end %>
-                          
-                    
-                    
+
 					</div>
 					<% job_tags = job.tag_list %>
 					<% if !job_tags.empty? %>
@@ -39,7 +37,6 @@
 							<% end %>
 						</div>
 					<% end %>
-					
 					
 					<% if controller.controller_name != 'dashboard' %>
 					    <div class="job_desc">
