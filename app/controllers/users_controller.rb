@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   before_filter :correct_user_access, :only => [ :edit, :update, :destroy ]
   
   def show 
-    redirect_to :controller => :dashboard, :action => :index unless params[:id].to_s == @current_user.id.to_s
+    redirect_to :controller => :dashboard, :action => :index unless params[:id].to_s == current_user.id.to_s
   end
 
   def create
@@ -45,8 +45,8 @@ class UsersController < ApplicationController
   end
 
   def profile
-    @user = @current_user
-    prepare_attribs_in_params(@current_user)
+    @user = current_user
+    prepare_attribs_in_params(current_user)
     render :edit
   end
   
@@ -74,7 +74,7 @@ class UsersController < ApplicationController
   def correct_user_access
     if (User.find_by_id(params[:id]) == nil || current_user != User.find_by_id(params[:id]))
       # flash[:error] = "params[:id] is " + params[:id] + "<br />"
-      # flash[:error] = "@current_user is " + @current_user + "<br />"
+      # flash[:error] = "current_user is " + current_user + "<br />"
       flash[:error] += "Unauthorized access denied. Do not pass Go. Do not collect $200."
             redirect_to :controller => 'dashboard', :action => :index
     end
