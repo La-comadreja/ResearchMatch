@@ -1,6 +1,5 @@
 class ApplicsController < ApplicationController
   include CASControllerIncludes
-  before_filter :rm_login_required
   before_filter :find_objects
 
   # These filters verify that current_user has the right permissions
