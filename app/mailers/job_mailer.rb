@@ -24,7 +24,6 @@ class JobMailer < ActionMailer::Base
       end
     end
 
-    binding.pry
     mail(:to => [@job.user.email] | @job.faculties.collect(&:email),
          :subject => "[ResearchMatch] Application for Research")
   end

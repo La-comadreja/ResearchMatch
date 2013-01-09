@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="634db484-1f3d-4c8a-9f8c-8fb000277c90" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/devise.rb" afterPath="$PROJECT_DIR$/config/initializers/devise.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailers/job_mailer.rb" afterPath="$PROJECT_DIR$/app/mailers/job_mailer.rb" />
     </list>
     <ignored path="ResearchMatch.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,19 +52,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="job_mailer.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="job_mailer.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/mailers/job_mailer.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="5" selection-start="860" selection-end="860" vertical-scroll-proportion="0.0">
+            <state line="25" column="5" selection-start="860" selection-end="860" vertical-scroll-proportion="0.6625442">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="devise.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="devise.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="32" selection-start="5519" selection-end="5519" vertical-scroll-proportion="0.403255">
+            <state line="110" column="32" selection-start="5519" selection-end="5519" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -107,8 +106,8 @@
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/applics_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
-        <option value="$PROJECT_DIR$/app/mailers/job_mailer.rb" />
         <option value="$PROJECT_DIR$/config/initializers/devise.rb" />
+        <option value="$PROJECT_DIR$/app/mailers/job_mailer.rb" />
       </list>
     </option>
   </component>
@@ -537,16 +536,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/mailers/job_mailer.rb">
+    <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="5" selection-start="860" selection-end="860" vertical-scroll-proportion="0.0">
+        <state line="110" column="32" selection-start="5519" selection-end="5519" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
+    <entry file="file://$PROJECT_DIR$/app/mailers/job_mailer.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="32" selection-start="5519" selection-end="5519" vertical-scroll-proportion="0.403255">
+        <state line="25" column="5" selection-start="860" selection-end="860" vertical-scroll-proportion="0.6625442">
           <folding />
         </state>
       </provider>
