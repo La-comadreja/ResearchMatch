@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', ['3.0.17']
+gem 'rails', ['3.0.18']
 
 # Data
 gem 'sqlite3', '>= 1.3.6'
@@ -22,7 +22,7 @@ gem 'nokogiri'
 gem 'omniauth'
 gem 'pry-nav'
 gem 'pry-rails'
-gem 'railties', '3.0.17'
+gem 'railties', '3.0.18'
 gem 'will_paginate', "~> 3.0.pre2"
 
 # Deploy with Capistrano
