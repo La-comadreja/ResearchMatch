@@ -17,17 +17,17 @@ ResearchMatch::Application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default :charset => "utf-8"
   config.action_mailer.smtp_settings = {
-  				     :authentication => :plain,
-				     :address => "smtp.mailgun.org",
-				     :port => 587,
-				     :domain => "researchmatch.mailgun.org",
-				     :user_name => "postmaster@researchmatch.mailgun.org",
-				     :password => "1zx7p9jpmnw9"
-				     }
+  				  :authentication => :plain,
+				    :address => "smtp.mailgun.org",
+				    :port => 587,
+				    :domain => "researchmatch.mailgun.org",
+				    :user_name => "postmaster@researchmatch.mailgun.org",
+				    :password => "1zx7p9jpmnw9"
+	}
 
   # Show full error reports and disable caching
   config.consider_all_requests_local       = true
-# config.action_view.debug_rjs             = true
+  # config.action_view.debug_rjs             = true
   config.action_controller.perform_caching = false
 
   # Print deprecation notices to the Rails logger
@@ -38,12 +38,6 @@ ResearchMatch::Application.configure do
 
   # Logging
   config.log_level = :info
-
-  # CAS authentication
-#  CASClient::Frameworks::Rails::Filter.configure(
-#    :cas_base_url => "https://wind.columbia.edu/"
-#    #:cas_base_url => "https://auth-test.berkeley.edu/cas/"
-#  )
 
   # ActionMailer
   ActionMailer::Base.raise_delivery_errors = true
