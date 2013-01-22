@@ -48,9 +48,9 @@ ResearchMatch::Application.configure do
   config.active_support.deprecation = :notify
 
   # CAS authentication
-  CASClient::Frameworks::Rails::Filter.configure(
-    :cas_base_url => "https://auth.berkeley.edu/cas/"
-  )
+  # CASClient::Frameworks::Rails::Filter.configure(
+  #   :cas_base_url => "https://auth.berkeley.edu/cas/"
+  # )
 
   # Enable Action Mailer
   config.action_mailer.delivery_method = :smtp
