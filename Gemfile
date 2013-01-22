@@ -3,7 +3,8 @@ source 'http://rubygems.org'
 gem 'rails', ['3.0.18']
 
 # Data
-gem 'sqlite3', '>= 1.3.6'
+gem 'pg'
+# gem 'sqlite3', '>= 1.3.6'
 
 # Debugging
 gem 'exception_notification'
