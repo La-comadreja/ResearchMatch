@@ -15,7 +15,6 @@ gem 'activerecord'
 gem 'activerecord-deprecated_finders', :git => 'git://github.com/rails/activerecord-deprecated_finders.git'
 gem 'acts_as_taggable_on_steroids', :require => ['acts_as_taggable', 'tags_helper', 'tag_list', 'tagging', 'tag']
 gem 'authlogic', :git => 'git://github.com/binarylogic/authlogic.git'
-gem 'cucumber-rails'
 gem 'devise', '~> 1.5.3'
 gem 'jquery-rails', '1.0.19'
 gem 'net-ldap', :require => 'net/ldap'
@@ -47,6 +46,7 @@ end
 group :test do
   gem 'autotest-rails'
   gem 'capybara'
+  gem 'cucumber-rails'
   gem 'database_cleaner'
   gem 'email_spec'
   gem 'rspec-rails'
