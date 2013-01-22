@@ -7,8 +7,6 @@ class User < ActiveRecord::Base
   #   name                   : string 
   #   login                  : string 
   #   email                  : string 
-  #   crypted_password       : string 
-  #   password_salt          : string 
   #   persistence_token      : string 
   #   single_access_token    : string 
   #   perishable_token       : string 
@@ -29,7 +27,6 @@ class User < ActiveRecord::Base
   #   year                   : integer 
   #   reset_password_token   : string 
   #   reset_password_sent_at : datetime 
-  #   remember_token         : string 
   #   remember_created_at    : datetime 
   #   sign_in_count          : integer 
   #   current_sign_in_at     : datetime 

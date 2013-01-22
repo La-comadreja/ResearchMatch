@@ -5,6 +5,7 @@ cscope.*
 *.swp
 **/*.pid
 config/smtp_settings.rb
+config/database.yml
 db/*.sqlite3
 files/
 mysql2/

@@ -20,6 +20,7 @@ class Job < ActiveRecord::Base
   #   end_date            : datetime 
   #   open                : boolean 
   #   compensation        : integer 
+  #   status              : integer 
   # =======================
 
   include AttribsHelper
