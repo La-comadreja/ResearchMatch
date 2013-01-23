@@ -33,6 +33,7 @@ class User < ActiveRecord::Base
   #   last_sign_in_at        : datetime 
   #   current_sign_in_ip     : string 
   #   last_sign_in_ip        : string 
+  #   salt                   : string 
   # =======================
 
   # Include default devise modules. Others available are:
