@@ -21,27 +21,6 @@ ActiveRecord::Schema.define(:version => 20130123182620) do
     t.text     "message"
     t.integer  "resume_id"
     t.integer  "transcript_id"
-    t.string   "status",        :default => "undecided"
-  end
-
-  create_table "authentications", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "provider"
-    t.string   "uid"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "authorizations", :force => true do |t|
-    t.string   "provider"
-    t.string   "uid"
-    t.integer  "user_id"
-    t.string   "token"
-    t.string   "secret"
-    t.string   "name"
-    t.string   "link"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "categories", :force => true do |t|
@@ -94,16 +73,6 @@ ActiveRecord::Schema.define(:version => 20130123182620) do
     t.datetime "updated_at"
   end
 
-  create_table "evaluations", :force => true do |t|
-    t.string   "Name"
-    t.text     "Recommendation"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "evaluations", ["user_id"], :name => "index_evaluations_on_users_id"
-
   create_table "faculties", :force => true do |t|
     t.string   "name"
     t.string   "email"
@@ -136,14 +105,6 @@ ActiveRecord::Schema.define(:version => 20130123182620) do
     t.datetime "end_date"
     t.boolean  "open",                :default => true
     t.integer  "compensation",        :default => 0
-    t.integer  "status",              :default => 0
-  end
-
-  create_table "owns", :force => true do |t|
-    t.integer  "job_id"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "pictures", :force => true do |t|
@@ -170,23 +131,6 @@ ActiveRecord::Schema.define(:version => 20130123182620) do
 
   create_table "proglangs", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "projects", :force => true do |t|
-    t.string   "Title"
-    t.string   "Subfield"
-    t.string   "Contact"
-    t.text     "Summary"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "recommendations", :force => true do |t|
-    t.string   "name"
-    t.text     "evaluation"
-    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -224,8 +168,9 @@ ActiveRecord::Schema.define(:version => 20130123182620) do
 
   create_table "users", :force => true do |t|
     t.string   "name"
-    t.string   "login"
+    t.string   "login",                                 :null => false
     t.string   "email",                                 :null => false
+    t.string   "crypted_password",                      :null => false
     t.string   "persistence_token",                     :null => false
     t.string   "single_access_token",                   :null => false
     t.string   "perishable_token",                      :null => false
@@ -246,12 +191,14 @@ ActiveRecord::Schema.define(:version => 20130123182620) do
     t.integer  "year"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
+    t.string   "remember_token"
     t.datetime "remember_created_at"
     t.integer  "sign_in_count",          :default => 0
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "password_salt"
     t.string   "salt"
   end
 

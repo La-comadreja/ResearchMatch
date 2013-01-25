@@ -6,15 +6,13 @@ class AddDeviseToUsers < ActiveRecord::Migration
       # t.rememberable
       # t.trackable
 
-      t.encryptable
+      # t.encryptable
       # t.confirmable
       # t.lockable :lock_strategy => :failed_attempts, :unlock_strategy => :both
       # t.token_authenticatable
 
-
       # Uncomment below if timestamps were not included in your original model.
       # t.timestamps
-      t.string :password_salt
     end
 
     # add_index :users, :email,                :unique => true
