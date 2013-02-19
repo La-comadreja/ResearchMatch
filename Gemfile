@@ -17,6 +17,7 @@ gem 'acts_as_taggable_on_steroids', :require => ['acts_as_taggable', 'tags_helpe
 gem 'authlogic', :git => 'git://github.com/binarylogic/authlogic.git'
 gem 'devise', '~> 1.5.3'
 gem 'jquery-rails', '1.0.19'
+gem 'json', '1.7.7'
 gem 'net-ldap', :require => 'net/ldap'
 gem 'nokogiri'
 gem 'omniauth'
