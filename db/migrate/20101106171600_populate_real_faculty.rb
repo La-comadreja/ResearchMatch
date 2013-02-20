@@ -135,6 +135,7 @@ class PopulateRealFaculty < ActiveRecord::Migration
     Faculty.create :name => "Bin Yu", :email => "binyu@stat.berkeley.edu", :department => "EECS"
     Faculty.create :name => "Lotfi A. Zadeh", :email => "zadeh@cs.berkeley.edu", :department => "EECS"
     Faculty.create :name => "Avideh Zakhor", :email => "avz@eecs.berkeley.edu", :department => "EECS"
+    Faculty.create :name => "Rebecca Sealfon", :email => "ras2198@columbia.edu", :department => "EECS"
   end
 
   def self.down
