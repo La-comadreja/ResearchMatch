@@ -11,6 +11,11 @@
   Department.find_or_create_by_name abbrev
 
   Faculty.create(:name => "Rebecca Sealfon", :email => "ras2198@columbia.edu")
+
+  Department.create :name => "College of Staten Island (CUNY)"
+  Department.create :name => "Columbia University"
+  Department.create :name => "New York University"
+  Department.create :name => "Startups - NYC"
 end
 
 #   Development-specific seeds

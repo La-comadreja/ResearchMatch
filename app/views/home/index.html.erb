@@ -17,7 +17,7 @@
     <td background="<%= image_path "research_match_display_02.png" %>" height="59" style="width: 308px;background-repeat: no-repeat">
       <div id="browse_listings_menu">
         <%= form_tag(:jobs, :method => "get") do %>
-          <%= select_tag(:department, "<option disabled>--Select an Institution--</option><option value='0'>All Institutions</option>".html_safe + options_from_collection_for_select(@departments, :id, :name),  { :onchange => "this.form.submit();"}) %>
+          <%= select_tag(:department, "<option disabled>--Select Institution--</option><option value='0'>All Institutions</option>".html_safe + options_from_collection_for_select(@departments, :id, :name),  { :onchange => "this.form.submit();"}) %>
         <% end %>
       </div>
     </td>
@@ -32,6 +32,9 @@
 <p>
   <h3><b>News</b></h3>
 </p>
+<p>
+  Interested in contributing to the site?  Check out our <%=link_to 'open-source code', 'https://github.com/La-comadreja/ResearchMatch', :target => '_blank' %>.
+</p><br>
 <p>
   This app was created by
   <%= link_to 'UC Berkeley', 'http://berkeley.edu', :target => '_blank' %> and
