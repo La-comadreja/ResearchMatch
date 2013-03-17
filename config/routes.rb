@@ -3,6 +3,7 @@ ResearchMatch::Application.routes.draw do
   devise_for :users, :class => 'DashboardController'
 
   get "contact_us/contact", :as => :contact_us
+  get "contact_us/contact_wo_login", :as => :contact_wo_login
   post "contact_us/send_email", :as => :feedback_email_link
 
   resources :pictures

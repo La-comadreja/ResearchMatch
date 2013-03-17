@@ -7,6 +7,9 @@ class ContactUsController < ApplicationController
       redirect_back_or home_path
     end
   end
+
+  def contact_wo_login
+  end
   
   def send_email
     sender = params[:sender]
@@ -15,6 +18,11 @@ class ContactUsController < ApplicationController
     mail = FeedbackMailer.send_feedback(sender, subject, body)
     mail.deliver
     flash[:notice] = "Your message has been sent. Thanks for your feedback!"
-    redirect_to dashboard_path
+    
+    if user_signed_in?
+      redirect_to dashboard_path
+    else
+      redirect_to home_path
+    end
   end
 end
