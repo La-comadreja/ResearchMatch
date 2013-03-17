@@ -204,54 +204,17 @@ class User < ActiveRecord::Base
     true
   end
 
-
-  # @return [UCB::LDAP::Person] for this User
-  #def ldap_person
-  #  @person ||= UCB::LDAP::Person.find_by_uid(self.login) if self.login
-  #end
-
   # @return [String] Full name, as provided by LDAP
   def ldap_person_full_name
     self.name
   end
 
-
-  # Updates this User's role, based on the
-  # LDAP information. Raises an error if the user type can't be determined.
-  #
-  # @param options [Hash]
-  # @option options [Boolean] :save Also commit user type to the database (default +false+)
-  # @option options [Boolean] :update Same as +:save+
-  # @return [Integer] Inferred user {Types Type}
-  #
   def update_user_type(options={})
     unless options[:stub].blank?   # stub type
       options[:stub] = User::Types::Undergrad unless User::Types::All.include?(options[:stub].to_i)
       self.user_type = options[:stub].to_i
     else  # update via LDAP
       person = self.ldap_person
-                                   # August 10, 2012: Commented out the code related to different types of users.  Refactor this later, but it seems a Berkeley specific feature.
-                                   #      case   # Determine role
-                                   # Faculty
-                                   #        when (person.employee_academic? and not person.employee_expired? and not ['G','U'].include?(person.berkeleyEduStuUGCode))
-                                   #          self.user_type = User::Types::Faculty
-
-                                   # Student
-                                   #        when (person.student? and person.student_registered?)
-                                   #          case person.berkeleyEduStuUGCode
-                                   #            when 'G'
-                                   #              self.user_type = User::Types::Grad
-                                   #            when 'U'
-                                   #              self.user_type = User::Types::Undergrad
-                                   #            else
-                                   #              logger.error "User.update_user_type: Couldn't determine student type for login #{self.login}"
-                                   #              raise StandardError, "berkeleyEduStuUGCode not accessible. Have you authenticated with LDAP?"
-                                   #          end # under/grad
-                                   #        else
-                                   #          logger.error "User.update_user_type: Couldn't determine user type for login #{self.login}, defaulting to Undergrad"
-                                   #          #raise StandardError, "couldn't determine user type for login #{self.login}"
-                                   #          self.user_type = User::Types::Undergrad
-                                   #        end # employee/student
     end # stub
 
     self.update_attribute(:user_type, self.user_type) if options[:save] || options[:update]

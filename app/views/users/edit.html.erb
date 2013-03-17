@@ -16,23 +16,21 @@
     <br />
   <% end if current_user != nil %>
 
-<!-- Basic info: i.e., email address -->
+  <!-- Basic info: i.e., email address -->
   <%# TODO: don't rip off dashboard CSS! %>
   <div class="dashboard_container">
     <div class="dashboard_wrapper_medium">
       <div class="dashboard_container_medium box_shadow" style="float:left">
         <h2>The Basics</h2>
         <div class="left_col">
-          <p>Name: <b><%= current_user.name %></b></p>
+          <p>
+            Name: <b><%= current_user.name %></b>
+          </p>
           <br />
-          <p><%= label_tag 'email', 'E-mail address' %>:<br />
-              <%= current_user.email %>
+          <p>
+            <%= label_tag 'email', 'E-mail address' %>: <%= current_user.email %>
           </p>
         </div>
-         <!--<div class="right_col">
-          <%# utype = @user.user_type %>
-          To Do: Explain what Users can do.
-        </div> <%# Right col %> -->
       </div>
     </div>
   </div>
@@ -65,84 +63,83 @@
     </div>
   </div>
 
-<br /><br />
+  <br /><br />
 
-    <%# TODO CSS this up %>
-    <div class="dashboard_container"><div class="wrapper_medium"><div class="dashboard_container_medium box_shadow">
-      <h2>At a Glance</h2>
+  <%# TODO CSS this up %>
+  <div class="dashboard_container"><div class="wrapper_medium"><div class="dashboard_container_medium box_shadow">
+    <h2>At a Glance</h2>
 
-      <p>
-        These are the basics that faculty will want to know up-front when you apply.
-      </p>
-      <br/>
-
-      <p>
-        I'm a
-        <%= f.select :year, options_for_select( (1..4).collect{|y| [y.ordinalize, y] }, current_user.year) %> year student, and taking
-        <%= f.text_field :units, :style => 'width: 36px; text-align:center;', :placeholder => '0' %>
-        units this semester.
-      </p>
-      <br/>
-
-      <p>
-        I can commit
-        <%= f.text_field :free_hours, :style => 'width: 36px; text-align:center;', :placeholder => '0' %>
-        hours per week to research.
-      </p>
-      <br/>
-
-      <p>
-        Available to work over summer?
-        <%= f.check_box :summer %>
-      </p>
-      <br/>
-
-      <p>
-        Why are you interested in research?<br/>
-        <%= f.text_area :research_blurb, :rows => 3, :id => 'research-blurb' %>
-        <%= render 'shared/charcounter', :linked => 'research-blurb', :limit => 255 %>
-      </p>
-      <br/>
-
-      <p>
-        Brief description of past internships or other relevant experience:
-        <%= f.text_area :experience, :rows => 3, :id => 'experience-box' %>
-        <%= render 'shared/charcounter', :linked => 'experience-box', :limit => 255 %>
-      </p>
-      <br/>
-
-    </div>
+    <p>
+      These are the basics that faculty and employers will want to know up-front when you apply.
+    </p>
     <br/>
 
-    <%# unless @user.is_faculty? %>
-    <div class="dashboard_container"><div class="dashboard_wrapper_medium"><div class="dashboard_container_medium box_shadow">
-      <h2>Attachments</h2>
-
-      <p>
-        Please provide a link to any relevant supplementary material, like a r&eacute;sum&eacute; or portfolio.
-        This is your chance to impress the faculty!
-        <br/>
-      </p>
-      <br/>
-
-      <p>
-        <%= f.text_field :url, :class => 'external-url', :style => 'width:100%;' %>
-      </p>
-      <p style="font-size:x-small;">
-        If you need a place to store files, there are many free options, like
-        <%= link_to 'Dropbox', 'http://dropbox.com' %> and
-        <%= link_to 'Google Docs', 'http://docs.google.com' %>.
-      </p>
-      <br/>
-    </div>
-
-    <p style="text-align:center;">
-      <br />
-      <%= f.submit 'Update' %>
+    <p>
+      I'm a
+      <%= f.select :year, options_for_select( (1..4).collect{|y| [y.ordinalize, y] }, current_user.year) %> year student, and taking
+      <%= f.text_field :units, :style => 'width: 36px; text-align:center;', :placeholder => '0' %>
+      units this semester.
     </p>
+    <br/>
 
-<br/>
-</div></div>
+    <p>
+      I can commit
+      <%= f.text_field :free_hours, :style => 'width: 36px; text-align:center;', :placeholder => '0' %>
+      hours per week to research.
+    </p>
+    <br/>
 
+    <p>
+      Available to work over summer?
+      <%= f.check_box :summer %>
+    </p>
+    <br/>
+
+    <p>
+      Why are you interested in research?<br/>
+      <%= f.text_area :research_blurb, :rows => 3, :id => 'research-blurb' %>
+      <%= render 'shared/charcounter', :linked => 'research-blurb', :limit => 255 %>
+    </p>
+    <br/>
+
+    <p>
+      Brief description of past internships or other relevant experience:
+      <%= f.text_area :experience, :rows => 3, :id => 'experience-box' %>
+      <%= render 'shared/charcounter', :linked => 'experience-box', :limit => 255 %>
+    </p>
+    <br/>
+
+  </div>
+  <br/>
+
+  <div class="dashboard_container"><div class="dashboard_wrapper_medium"><div class="dashboard_container_medium box_shadow">
+    <h2>Attachments</h2>
+
+    <p>
+      Please provide a link to any relevant supplementary material, like a resum&eacute; or portfolio.
+      This is your chance to impress faculty and employers!
+      <br/>
+    </p>
+    <br/>
+
+    <p>
+      <%= f.text_field :url, :class => 'external-url', :style => 'width:100%;' %>
+    </p>
+    <p style="font-size:x-small;">
+      If you need a place to store files, there are many free options, like
+      <%= link_to 'Dropbox', 'http://dropbox.com' %> and
+      <%= link_to 'Google Drive', 'http://drive.google.com' %>.
+    </p>
+    <br/>
+  </div>
+
+  <p style="text-align:center;">
+    <br />
+    <%= f.submit 'Update' %>
+  </p>
+
+  <br/>
+  </div>
+</div>
 <% end %>
 
