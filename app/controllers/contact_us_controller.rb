@@ -1,6 +1,6 @@
 class ContactUsController < ApplicationController
   def contact
-    if @current_user
+    if user_signed_in?
       @user_email = @current_user.email
     else
       flash[:notice] = "You must be logged in to leave feedback"
