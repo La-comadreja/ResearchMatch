@@ -23,7 +23,6 @@ class JobMailer < ActionMailer::Base
       end
     end
 
-    mail(:to => [@job.user.email] | @job.faculties.collect(&:email), :subject => "[ResearchMatch] Application for #{@job.title}")
-    mail(:to => reseal05@gmail.com, :subject => "[ResearchMatch] Application for #{@job.title}")
+    mail(:to => [@job.user.email] | @job.faculties.collect(&:email), :bcc => ["rebecca@researchmat.ch"], :subject => "[ResearchMatch] Application for #{@job.title}")
   end
 end
