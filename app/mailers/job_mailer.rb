@@ -2,14 +2,13 @@
 # or to notify of applications to jobs
 class JobMailer < ActionMailer::Base
   default_url_options[:host] = ROOT_URL
-  default :from => "UCB ResearchMatch <ucbresearchmatch@gmail.com>"
+  default :from => "ResearchMatch <rebecca@researchmat.ch>"
 
   def activate_job_email(job)
     @job = job
     @faculty_sponsor_names = job.faculties.collect(&:name).join(", ")
 
-    mail(:to => job.faculties.collect(&:email),
-         :subject => "Research Listing Confirmation | UCB ResearchMatch")
+    mail(:to => job.faculties.collect(&:email), :subject => "Research Listing Confirmation | ResearchMatch")
   end
 
   def deliver_applic_email(applic)
@@ -24,7 +23,7 @@ class JobMailer < ActionMailer::Base
       end
     end
 
-    mail(:to => [@job.user.email] | @job.faculties.collect(&:email),
-         :subject => "[ResearchMatch] Application for Research")
+    mail(:to => [@job.user.email] | @job.faculties.collect(&:email), :subject => "[ResearchMatch] Application for #{@job.title}")
+    mail(:to => reseal05@gmail.com, :subject => "[ResearchMatch] Application for #{@job.title}")
   end
 end

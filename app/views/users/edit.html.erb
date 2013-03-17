@@ -24,7 +24,7 @@
         <h2>The Basics</h2>
         <div class="left_col">
           <p>
-            Name: <b><%= current_user.name %></b>
+            Name: <b><%= f.text_field :name, :value => current_user.name %></b>
           </p>
           <br />
           <p>
