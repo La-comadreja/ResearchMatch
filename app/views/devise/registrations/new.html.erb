@@ -7,69 +7,60 @@
 <%= error_messages_for :user %>
 
 <% form_for :user, :url => users_path do |f| -%>
-
 <div id="signup_fields">
+  <!-- Step 1 -->
+  <div id="step1">
+    <div id="full_name_field">
+      <p><%= label_tag 'name', 'Full Name' %>:<br/>
+	<%= f.text_field :name %></p>
+    </div>
 
-    <!-- Step 1 -->
-    <div id="step1">
-      <div id="full_name_field">
-        <p><%= label_tag 'name', 'Full Name' %>:<br/>
-	  <%= f.text_field :name %></p>
-      </div>
+    <div id="email_field">
+      <p><%= label_tag 'email', 'E-mail address' %> (All ResearchMatch-related emails will be sent to this address):<br/>  
+        <%= f.text_field :email %></p>
+    </div>
 
-      <div id="email_field">
-          <p><%= label_tag 'email', 'E-mail address' %> (All ResearchMatch-related emails will be sent to this address):<br/>  
-          <%= f.text_field :email %></p>
-      </div>
-
-      <div id="password_field">
-          <%= label_tag 'password' %>:<br/>
-          <%= f.password_field :password %>
-          <br />
-          <%= label_tag 'password_confirmation', 'Confirm password (enter it again)' %>:<br/>
-          <%= f.password_field :password_confirmation %>
-      </div>
-   </div>
-
-    <!-- Step 2 -->
-    <div id="step2">
-      <br/>
-      <%= submit_tag 'Sign Up Now' %> or <b>continue below</b>.
-      <br/><br/><br/>
-
-      <i><b>Note:</b> The rest of this information is optional, but it may increase your chances of landing a research position. <br />
-      Don't feel obligated to fill this in right now -- you can always do so later by clicking the "Edit Profile" tab near the top of the page.</i>
-
-      <br>
-      <br>
-
-      <%= image_tag "../images/new_user_steps_02.png", :border => 0 %>
-
+    <div id="password_field">
+      <%= label_tag 'password' %>:<br/>
+      <%= f.password_field :password %>
       <br />
-      
+      <%= label_tag 'password_confirmation', 'Confirm password (enter it again)' %>:<br/>
+      <%= f.password_field :password_confirmation %>
+    </div>
+  </div>
 
-      <div class="ui-widget">
+  <!-- Step 2 -->
+  <div id="step2">
+    <br/>
+    <%= submit_tag 'Sign Up Now' %> or <b>continue below</b>.  (Columbia, NYU and College of Staten Island email addresses only)
+    <br/><br/><br/>
+
+    <i><b>Note:</b> The rest of this information is optional, but may increase your chances of landing a position. <br />
+    Don't feel obligated to fill this in &mdash; you can always change it by clicking "Edit Profile" near the top of the page.</i>
+
+    <br><br>
+    <%= image_tag "../images/new_user_steps_02.png", :border => 0 %>
+
+    <div class="ui-widget">
+      Interests (please enter the names of categories, separated by commas,
+              e.g. <i>robotics, cancer, writing, marketing, news media</i>):<br />
+      <%= text_field :category, :name, :class => 'wide'  %>
+      <br />
+    </div>
+      
+    <div class="ui-widget">
       Courses (please enter the names of your courses, separated by commas, e.g. <i>CS194, CS61A</i>):<br />
       <%= text_field :course, :name, :class => 'wide'  %>
       <br />
-      </div>
-
-
-      <div class="ui-widget">
-      <br />
-      Interests -- what research categories are you interested in? (please enter the names of categories, separated by commas, 
-              e.g. <i>algorithms, security, signal processing</i>):<br />
-      <%= text_field :category, :name, :class => 'wide'  %>
-      <br />
-      </div>
+    </div>
       
-      <div class="ui-widget">
+    <div class="ui-widget">
       <br />
-      Programming languages in which you are proficient: <br />
+      Programming languages in which you are proficient (if any): <br />
       <%= text_field :proglang, :name, :class => 'wide' %>
       <br />
-      </div>
     </div>
+  </div>
 </div>
 
 <br />
