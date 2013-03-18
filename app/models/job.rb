@@ -25,16 +25,20 @@ class Job < ActiveRecord::Base
   include AttribsHelper
 
   module Compensation         # bit flags
-    None   = 0
-    Pay    = 1
+    None = 0
+    Pay = 1
     Credit = 2
-    Both   = Pay | Credit
+    Both = Pay | Credit
+    Equity = 3
+    Mix = Pay | Equity
 
     All    = {
-      'None'   => None,
-      'Pay'    => Pay,
+      'None' => None,
+      'Pay' => Pay,
       'Credit' => Credit,
-      'Pay and Credit'   => Both
+      'Pay and Credit' => Both,
+      'Equity' => Equity,
+      'Pay and Equity' => Mix
     }
   end
 
@@ -49,7 +53,6 @@ class Job < ActiveRecord::Base
 
   has_many :watches
   has_many :applics
-  #has_many :applicants, :class_name => 'User', :through => :applics
   has_many :applicants, :through => :applics, :source => :user
   has_many :users, :through => :watches
   has_many :sponsorships, :dependent => :destroy
@@ -113,6 +116,10 @@ class Job < ActiveRecord::Base
     (self.compensation & Compensation::Credit) > 0
   end
 
+  def equity?
+    (self.compensation & Compensation::Equity) > 0
+  end
+
   def self.active_jobs
     Job.find(:all, :conditions => {:active => true}, :order => "created_at DESC")
   end
@@ -121,10 +128,10 @@ class Job < ActiveRecord::Base
     list_separator = ','        # string that separates items in the stored list
 
     query = []
-     [my.course_list_of_user,
+      [my.course_list_of_user,
       my.category_list_of_user,
       my.proglang_list_of_user].each do |list|
-       query << list.split(list_separator)
+        query << list.split(list_separator)
     end
 
     # magic
@@ -197,7 +204,9 @@ class Job < ActiveRecord::Base
       compensations = []
       compensations << Compensation::Pay if (options[:compensation].to_i & Compensation::Pay) != 0
       compensations << Compensation::Credit if (options[:compensation].to_i & Compensation::Credit) != 0
-      compensations << Compensation::Both unless compensations.empty?
+      compensations << Compensation::Equity if (options[:compensation].to_i & Compensation::Equity) != 0
+      compensations << Compensation::Both if (options[:compensation].to_i & Compensation::Pay) != 0 && (options[:compensation].to_i & Compensation::Credit) != 0
+      compensations << Compensation::Mix if (options[:compensation].to_i & Compensation::Pay) != 0 && (options[:compensation].to_i & Compensation::Equity) != 0
       relation = relation.where(tables['jobs'][:compensation].in_any(compensations))
     end
     relation = relation.where(tables['jobs'][:active].eq(true)) unless options[:include_inactive]
@@ -245,7 +254,6 @@ class Job < ActiveRecord::Base
   end
 
   def self.find_recently_added(n)
-  #Job.find(:all, {:order => "created_at DESC", :limit=>n, :active=>true} )
     Job.find_jobs( :extra_conditions => {:order=>"created_at DESC", :limit=>n} )
   end
 
@@ -379,5 +387,4 @@ class Job < ActiveRecord::Base
       latest_start_date.present? && !open_ended_end_date &&
         latest_start_date > end_date
   end
-
 end
