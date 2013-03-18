@@ -19,7 +19,9 @@
             "Don't care" => Job::Compensation::None,
             "Pay"        => Job::Compensation::Pay,
             "Credit"     => Job::Compensation::Credit,
-            "Pay or credit" => Job::Compensation::Both
+            "Pay or credit" => Job::Compensation::Both,
+            "Equity"     => Job::Compensation::Equity,
+            "Pay or equity" => Job::Compensation::Mix
             }, @compensation) %>
     <%= submit_tag "Search" %>
     <br />
@@ -55,7 +57,7 @@
 <% else %> 
 <!-- there are results -->
 <% if params[:query].nonempty? %>
-	Your search for "<%= params[:query] %>" returned <%= @jobs.length %> results.<br /><br />
+  Your search for "<%= params[:query] %>" returned <%= @jobs.length %> results.<br /><br />
 <% end %>
 <div id="browse_results_wrapper">
   <div id="browse_results_pagination">
@@ -65,24 +67,19 @@
   <br />
   <div id="browse_results">
     <div id="browse_header">
-          <div class="job_padding_wrapper">
-          <table id="browse_header_table">
-          <tr>
-                  
-                  <td class="job_table_left">Title &amp; Description</td>
-                  <td class="job_credit">Form of Compensation</td>
-                  <td class="job_credit"># Positions</td>
-                  
-                  </div>
+      <div class="job_padding_wrapper">
+        <table id="browse_header_table">
+          <tr>                
+            <td class="job_table_left">Title &amp; Description</td>
+            <td class="job_credit">Form of Compensation</td>
+            <td class="job_credit"># Positions</td>      
           </tr>
-          </table>
-          </div>
+        </table>
+      </div>
     </div>
     <%= render(:partial => "job", :collection => @jobs) %>
   </div>
   <%= will_paginate @jobs %>
 </div>
-
-
 <!-- end jobs.empty? -->
 <% end %>
