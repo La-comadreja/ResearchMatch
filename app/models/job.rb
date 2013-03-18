@@ -29,7 +29,7 @@ class Job < ActiveRecord::Base
     Pay = 1
     Credit = 2
     Both = Pay | Credit
-    Equity = 3
+    Equity = 4
     Mix = Pay | Equity
 
     All    = {
